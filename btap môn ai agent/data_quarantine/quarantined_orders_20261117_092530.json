@@ -1,0 +1,257 @@
+[
+  {
+    "order_id": "ORD_TEST_2026-11-16_3071",
+    "store_id": "STORE_04",
+    "store_name": "Cửa hàng #04 - Đống Đa (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "cancelled",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670762"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3072",
+    "store_id": "STORE_01",
+    "store_name": "Cửa hàng #01 - Ba Đình (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670770"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3073",
+    "store_id": "STORE_04",
+    "store_name": "Cửa hàng #04 - Đống Đa (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670771"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3074",
+    "store_id": "STORE_01",
+    "store_name": "Cửa hàng #01 - Ba Đình (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "cancelled",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670773"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3075",
+    "store_id": "STORE_04",
+    "store_name": "Cửa hàng #04 - Đống Đa (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670774"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3076",
+    "store_id": "STORE_01",
+    "store_name": "Cửa hàng #01 - Ba Đình (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670775"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3077",
+    "store_id": "STORE_04",
+    "store_name": "Cửa hàng #04 - Đống Đa (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "cancelled",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670776"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3078",
+    "store_id": "STORE_01",
+    "store_name": "Cửa hàng #01 - Ba Đình (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670777"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3079",
+    "store_id": "STORE_04",
+    "store_name": "Cửa hàng #04 - Đống Đa (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670778"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3080",
+    "store_id": "STORE_01",
+    "store_name": "Cửa hàng #01 - Ba Đình (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "cancelled",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670779"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3081",
+    "store_id": "STORE_04",
+    "store_name": "Cửa hàng #04 - Đống Đa (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670780"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3082",
+    "store_id": "STORE_01",
+    "store_name": "Cửa hàng #01 - Ba Đình (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670781"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3083",
+    "store_id": "STORE_04",
+    "store_name": "Cửa hàng #04 - Đống Đa (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "cancelled",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670782"
+  },
+  {
+    "order_id": "ORD_TEST_2026-11-16_3084",
+    "store_id": "STORE_01",
+    "store_name": "Cửa hàng #01 - Ba Đình (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 10:00:00",
+    "order_hour": 10,
+    "status": "completed",
+    "total_amount": 0.0,
+    "customer_phone": "090****000",
+    "customer_name": "T***",
+    "is_test": 1,
+    "quarantine_reasons": [
+      "INTERNAL_TEST_ORDER (is_test=1)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670783"
+  },
+  {
+    "order_id": "ORD_DIRTY_NEG_3085",
+    "store_id": "STORE_02",
+    "store_name": "Cửa hàng #02 - Cầu Giấy (HN)",
+    "region": "North",
+    "order_date": "2026-11-16 11:30:00",
+    "order_hour": 11,
+    "status": "completed",
+    "total_amount": -250000.0,
+    "customer_phone": "091****678",
+    "customer_name": "K***",
+    "is_test": 0,
+    "quarantine_reasons": [
+      "NEGATIVE_REVENUE (-250000.0)"
+    ],
+    "quarantined_at": "2026-11-17T09:25:30.670787"
+  }
+]

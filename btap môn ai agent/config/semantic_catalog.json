@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "domain": "Retail & E-commerce Operations",
+  "tables": {
+    "orders": {
+      "description": "Bảng lưu trữ thông tin đơn hàng bán buôn và bán lẻ theo thời gian thực",
+      "columns": {
+        "order_id": {"type": "VARCHAR(50)", "description": "Mã định danh duy nhất của đơn hàng", "is_pii": false},
+        "store_id": {"type": "VARCHAR(20)", "description": "Mã cửa hàng phát sinh đơn", "is_pii": false},
+        "order_date": {"type": "TIMESTAMP", "description": "Thời gian tạo đơn (UTC/ISO8601)", "is_pii": false},
+        "order_hour": {"type": "INTEGER", "description": "Khung giờ tạo đơn (0-23)", "is_pii": false},
+        "status": {"type": "VARCHAR(20)", "description": "Trạng thái đơn: completed, cancelled, pending", "is_pii": false},
+        "total_amount": {"type": "DECIMAL(12,2)", "description": "Giá trị đơn hàng (VNĐ)", "is_pii": false},
+        "customer_phone": {"type": "VARCHAR(20)", "description": "Số điện thoại khách hàng", "is_pii": true},
+        "customer_name": {"type": "VARCHAR(100)", "description": "Tên khách hàng", "is_pii": true},
+        "is_test": {"type": "BOOLEAN", "description": "Cờ đánh dấu đơn test nội bộ (1 = test, 0 = thật)", "is_pii": false}
+      }
+    },
+    "stores": {
+      "description": "Danh mục hệ thống cửa hàng và khu vực quản lý",
+      "columns": {
+        "store_id": {"type": "VARCHAR(20)", "description": "Mã cửa hàng", "is_pii": false},
+        "store_name": {"type": "VARCHAR(100)", "description": "Tên thương hiệu cửa hàng", "is_pii": false},
+        "region": {"type": "VARCHAR(50)", "description": "Khu vực kinh doanh (North, Central, South)", "is_pii": false},
+        "manager_id": {"type": "VARCHAR(50)", "description": "Mã người quản lý", "is_pii": false}
+      }
+    },
+    "inventory_alerts": {
+      "description": "Nhật ký cảnh báo đồng bộ tồn kho thực tế và hệ thống POS",
+      "columns": {
+        "alert_id": {"type": "VARCHAR(50)", "description": "Mã cảnh báo", "is_pii": false},
+        "store_id": {"type": "VARCHAR(20)", "description": "Mã cửa hàng liên quan", "is_pii": false},
+        "sku_id": {"type": "VARCHAR(50)", "description": "Mã sản phẩm", "is_pii": false},
+        "alert_time": {"type": "TIMESTAMP", "description": "Thời gian phát sinh lệch tồn kho", "is_pii": false},
+        "alert_reason": {"type": "VARCHAR(255)", "description": "Nguyên nhân (Lệch tồn POS, Hết hàng đột xuất, v.v.)", "is_pii": false}
+      }
+    }
+  },
+  "metrics": {
+    "cancellation_rate": {
+      "name": "Tỷ lệ hủy đơn (Cancellation Rate)",
+      "formula": "COUNT(CASE WHEN status = 'cancelled' THEN 1 END) * 1.0 / COUNT(*)",
+      "required_filters": ["is_test = 0"],
+      "benchmark_threshold": 0.08,
+      "risk_alert_threshold": 0.15
+    },
+    "revenue": {
+      "name": "Doanh thu thuần",
+      "formula": "SUM(CASE WHEN status = 'completed' THEN total_amount ELSE 0 END)",
+      "required_filters": ["is_test = 0", "total_amount >= 0"]
+    }
+  },
+  "rbac_rules": {
+    "Manager_Region_North": {
+      "allowed_regions": ["North"],
+      "can_view_pii": false,
+      "max_query_rows": 10000
+    },
+    "Manager_Region_South": {
+      "allowed_regions": ["South"],
+      "can_view_pii": false,
+      "max_query_rows": 10000
+    },
+    "Director_National": {
+      "allowed_regions": ["*"],
+      "can_view_pii": true,
+      "max_query_rows": 50000
+    }
+  }
+}
+

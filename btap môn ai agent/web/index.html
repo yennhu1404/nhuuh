@@ -1,0 +1,2560 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B AI Agent - Nền Tảng Tự Động Hóa Cơ Hội Bán Hàng Cho Mọi Doanh Nghiệp | Lê Yến Như</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=deep_error_cmd_link_v46">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="miffy-theme">
+
+  <!-- Hiệu Ứng Hình Nền Chuyển Động Miffy Đa Lớp (Rich Animated Dick Bruna Background) -->
+  <div id="miffyAnimatedBg" class="miffy-animated-bg" aria-hidden="true">
+    <div class="miffy-bg-aurora"></div>
+    <div class="miffy-bg-dots"></div>
+
+    <!-- 4 Đám mây pastel trôi nhiều tầng -->
+    <svg class="miffy-bg-item miffy-cloud-1" viewBox="0 0 120 60" width="132" height="66">
+      <path d="M28 48 H94 C105 48 112 40 112 31 C112 22 104 16 95 16 C92 7 82 2 71 4 C64 -1 51 1 46 10 C37 8 27 14 25 23 C16 24 10 31 10 38 C10 44 17 48 28 48 Z" fill="#FFFFFF" stroke="#E5D5A8" stroke-width="2.5"/>
+    </svg>
+    <svg class="miffy-bg-item miffy-cloud-2" viewBox="0 0 120 60" width="104" height="52">
+      <path d="M28 48 H94 C105 48 112 40 112 31 C112 22 104 16 95 16 C92 7 82 2 71 4 C64 -1 51 1 46 10 C37 8 27 14 25 23 C16 24 10 31 10 38 C10 44 17 48 28 48 Z" fill="#FFFFFF" stroke="#E5D5A8" stroke-width="2.5"/>
+    </svg>
+    <svg class="miffy-bg-item miffy-cloud-3" viewBox="0 0 120 60" width="88" height="44">
+      <path d="M28 48 H94 C105 48 112 40 112 31 C112 22 104 16 95 16 C92 7 82 2 71 4 C64 -1 51 1 46 10 C37 8 27 14 25 23 C16 24 10 31 10 38 C10 44 17 48 28 48 Z" fill="#FFFFFF" stroke="#EBD8A7" stroke-width="2.4"/>
+    </svg>
+
+    <!-- Miffy 1: Váy Cam Bruna bồng bềnh góc phải trên -->
+    <svg class="miffy-bg-item miffy-float-1" viewBox="0 0 80 96" width="76" height="90">
+      <ellipse cx="30" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="50" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="40" cy="40" rx="20.5" ry="17" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="40" cy="39" rx="18.5" ry="14.5" fill="#FFFFFF"/>
+      <circle cx="32" cy="39.5" r="2.2" fill="#2B241D"/>
+      <circle cx="48" cy="39.5" r="2.2" fill="#2B241D"/>
+      <path d="M37.5 44.5 L42.5 47.7 M42.5 44.5 L37.5 47.7" stroke="#2B241D" stroke-width="2" stroke-linecap="round"/>
+      <path d="M24 56 L56 56 L62 84 L18 84 Z" fill="#F37021" stroke="#2B241D" stroke-width="2.4" stroke-linejoin="round"/>
+    </svg>
+
+    <!-- Miffy 2: Khuôn mặt Miffy nhảy nhót bên trái -->
+    <svg class="miffy-bg-item miffy-float-2" viewBox="0 0 64 64" width="64" height="64">
+      <ellipse cx="22" cy="18" rx="6.2" ry="15" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="42" cy="18" rx="6.2" ry="15" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="32" cy="40" rx="20" ry="16.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="32" cy="39" rx="18" ry="14" fill="#FFFFFF"/>
+      <circle cx="24" cy="39" r="2.2" fill="#2B241D"/>
+      <circle cx="40" cy="39" r="2.2" fill="#2B241D"/>
+      <ellipse cx="18.5" cy="43" rx="2.6" ry="1.6" fill="#FFCAD4"/>
+      <ellipse cx="45.5" cy="43" rx="2.6" ry="1.6" fill="#FFCAD4"/>
+      <path d="M29.4 44.2 L34.6 47.4 M34.6 44.2 L29.4 47.4" stroke="#2B241D" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Miffy 3: Váy Vàng nắng lướt phía dưới -->
+    <svg class="miffy-bg-item miffy-float-3" viewBox="0 0 80 96" width="70" height="84">
+      <ellipse cx="30" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="50" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="40" cy="40" rx="20.5" ry="17" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="40" cy="39" rx="18.5" ry="14.5" fill="#FFFFFF"/>
+      <circle cx="32" cy="39.5" r="2.2" fill="#2B241D"/>
+      <circle cx="48" cy="39.5" r="2.2" fill="#2B241D"/>
+      <path d="M37.5 44.5 L42.5 47.7 M42.5 44.5 L37.5 47.7" stroke="#2B241D" stroke-width="2" stroke-linecap="round"/>
+      <path d="M24 56 L56 56 L62 84 L18 84 Z" fill="#FFD43B" stroke="#2B241D" stroke-width="2.4" stroke-linejoin="round"/>
+    </svg>
+
+    <!-- Miffy 4: Váy Xanh Dương Bruna -->
+    <svg class="miffy-bg-item miffy-float-4" viewBox="0 0 80 96" width="66" height="78">
+      <ellipse cx="30" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="50" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="40" cy="40" rx="20.5" ry="17" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.4"/>
+      <ellipse cx="40" cy="39" rx="18.5" ry="14.5" fill="#FFFFFF"/>
+      <circle cx="32" cy="39.5" r="2.2" fill="#2B241D"/>
+      <circle cx="48" cy="39.5" r="2.2" fill="#2B241D"/>
+      <path d="M37.5 44.5 L42.5 47.7 M42.5 44.5 L37.5 47.7" stroke="#2B241D" stroke-width="2" stroke-linecap="round"/>
+      <path d="M24 56 L56 56 L62 84 L18 84 Z" fill="#2D6BA8" stroke="#2B241D" stroke-width="2.4" stroke-linejoin="round"/>
+    </svg>
+
+    <!-- Miffy 5: Váy Xanh Lá cầm bóng bay đỏ bay lên -->
+    <svg class="miffy-bg-item miffy-float-5" viewBox="0 0 100 120" width="84" height="100">
+      <!-- Bóng bay đỏ Bruna -->
+      <line x1="74" y1="34" x2="62" y2="76" stroke="#2B241D" stroke-width="1.8"/>
+      <ellipse cx="75" cy="22" rx="13" ry="16" fill="#E63946" stroke="#2B241D" stroke-width="2.2"/>
+      <ellipse cx="71" cy="16" rx="3" ry="5" fill="#FFFFFF" opacity="0.5"/>
+      <!-- Miffy -->
+      <ellipse cx="30" cy="36" rx="6" ry="14.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.3"/>
+      <ellipse cx="48" cy="36" rx="6" ry="14.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.3"/>
+      <ellipse cx="39" cy="56" rx="19" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.3"/>
+      <ellipse cx="39" cy="55" rx="17" ry="13.5" fill="#FFFFFF"/>
+      <circle cx="31.5" cy="55.5" r="2" fill="#2B241D"/>
+      <circle cx="46.5" cy="55.5" r="2" fill="#2B241D"/>
+      <path d="M36.5 60 L41.5 63 M41.5 60 L36.5 63" stroke="#2B241D" stroke-width="1.9" stroke-linecap="round"/>
+      <path d="M24 70 L54 70 L60 98 L18 98 Z" fill="#2B9348" stroke="#2B241D" stroke-width="2.3" stroke-linejoin="round"/>
+    </svg>
+
+    <!-- Miffy 6: Khuôn mặt Miffy hồng pastel góc dưới phải -->
+    <svg class="miffy-bg-item miffy-float-6" viewBox="0 0 64 64" width="54" height="54">
+      <ellipse cx="22" cy="18" rx="6.2" ry="15" fill="#FFF0F3" stroke="#2B241D" stroke-width="2.3"/>
+      <ellipse cx="42" cy="18" rx="6.2" ry="15" fill="#FFF0F3" stroke="#2B241D" stroke-width="2.3"/>
+      <ellipse cx="32" cy="40" rx="20" ry="16.5" fill="#FFF0F3" stroke="#2B241D" stroke-width="2.3"/>
+      <ellipse cx="32" cy="39" rx="18" ry="14" fill="#FFF0F3"/>
+      <circle cx="24" cy="39" r="2.1" fill="#2B241D"/>
+      <circle cx="40" cy="39" r="2.1" fill="#2B241D"/>
+      <path d="M29.4 44.2 L34.6 47.4 M34.6 44.2 L29.4 47.4" stroke="#2B241D" stroke-width="1.9" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Bóng bay pastel bay chậm từ dưới lên -->
+    <svg class="miffy-bg-item miffy-balloon-1" viewBox="0 0 44 74" width="38" height="64">
+      <path d="M22 44 Q26 56 20 72" fill="none" stroke="#2B241D" stroke-width="1.8"/>
+      <ellipse cx="22" cy="22" rx="16" ry="20" fill="#F37021" stroke="#2B241D" stroke-width="2.2"/>
+      <ellipse cx="16" cy="15" rx="3.5" ry="6" fill="#FFFFFF" opacity="0.45"/>
+    </svg>
+    <svg class="miffy-bg-item miffy-balloon-2" viewBox="0 0 44 74" width="34" height="58">
+      <path d="M22 44 Q18 56 24 72" fill="none" stroke="#2B241D" stroke-width="1.8"/>
+      <ellipse cx="22" cy="22" rx="16" ry="20" fill="#FFD43B" stroke="#2B241D" stroke-width="2.2"/>
+      <ellipse cx="16" cy="15" rx="3.5" ry="6" fill="#FFFFFF" opacity="0.5"/>
+    </svg>
+
+    <!-- Hoa Dick Bruna xoay & lắc nhẹ -->
+    <svg class="miffy-bg-item miffy-flower-1" viewBox="0 0 48 48" width="40" height="40">
+      <circle cx="24" cy="12" r="8" fill="#FFD43B" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="36" cy="24" r="8" fill="#FFD43B" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="24" cy="36" r="8" fill="#FFD43B" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="12" cy="24" r="8" fill="#FFD43B" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="24" cy="24" r="6" fill="#F37021" stroke="#2B241D" stroke-width="2"/>
+    </svg>
+    <svg class="miffy-bg-item miffy-flower-2" viewBox="0 0 48 48" width="34" height="34">
+      <circle cx="24" cy="12" r="8" fill="#FFFFFF" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="36" cy="24" r="8" fill="#FFFFFF" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="24" cy="36" r="8" fill="#FFFFFF" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="12" cy="24" r="8" fill="#FFFFFF" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="24" cy="24" r="6" fill="#FFD43B" stroke="#2B241D" stroke-width="2"/>
+    </svg>
+    <svg class="miffy-bg-item miffy-flower-3" viewBox="0 0 48 48" width="32" height="32">
+      <circle cx="24" cy="12" r="8" fill="#FFCAD4" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="36" cy="24" r="8" fill="#FFCAD4" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="24" cy="36" r="8" fill="#FFCAD4" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="12" cy="24" r="8" fill="#FFCAD4" stroke="#2B241D" stroke-width="2"/>
+      <circle cx="24" cy="24" r="6" fill="#FFFFFF" stroke="#2B241D" stroke-width="2"/>
+    </svg>
+
+    <!-- Ngôi sao lấp lánh nhẹ -->
+    <svg class="miffy-bg-item miffy-star-1" viewBox="0 0 36 36" width="24" height="24">
+      <path d="M18 3 L21.5 13.5 L32 15 L23.5 22 L26 32.5 L18 26.5 L10 32.5 L12.5 22 L4 15 L14.5 13.5 Z" fill="#FFD43B" stroke="#2B241D" stroke-width="1.8" stroke-linejoin="round"/>
+    </svg>
+    <svg class="miffy-bg-item miffy-star-2" viewBox="0 0 36 36" width="20" height="20">
+      <path d="M18 3 L21.5 13.5 L32 15 L23.5 22 L26 32.5 L18 26.5 L10 32.5 L12.5 22 L4 15 L14.5 13.5 Z" fill="#F37021" stroke="#2B241D" stroke-width="1.8" stroke-linejoin="round"/>
+    </svg>
+    <svg class="miffy-bg-item miffy-star-3" viewBox="0 0 36 36" width="22" height="22">
+      <path d="M18 3 L21.5 13.5 L32 15 L23.5 22 L26 32.5 L18 26.5 L10 32.5 L12.5 22 L4 15 L14.5 13.5 Z" fill="#2D6BA8" stroke="#2B241D" stroke-width="1.8" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- ====================================================================
+       1. PUBLIC AREA: LANDING PAGE (PASTEL YELLOW GREETING)
+       ==================================================================== -->
+  <div id="publicLandingView">
+    <!-- Delicate floating bokeh -->
+    <div class="bg-ambient-bokeh">
+      <div class="bokeh-1"></div>
+      <div class="bokeh-2"></div>
+    </div>
+
+    <div class="landing-container">
+      <!-- Landing Header / Top Navigation -->
+      <header class="landing-top-nav">
+        <div class="brand-wrapper">
+          <div class="brand-icon-box" style="font-weight:800; letter-spacing:-0.5px;">B2B</div>
+          <div>
+            <div class="brand-text-title">B2B SALES AI AGENT</div>
+            <div class="brand-text-sub">NỀN TẢNG CHO MỌI DOANH NGHIỆP</div>
+          </div>
+        </div>
+
+        <ul class="landing-nav-links">
+          <li><a href="#heroCard">Trang chủ</a></li>
+          <li><a href="#aboutSection">Giới thiệu</a></li>
+          <li><a href="#featuresSection">Tính năng</a></li>
+          <li><a href="#contactSection">Liên hệ</a></li>
+          <li><a href="/slides.html" target="_blank" style="color:#b45309; font-weight:700;">Slide Thuyết Trình</a></li>
+        </ul>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+          <!-- Nút Chuyển Giao Diện Sáng / Tối Ở Góc Phải Trên Cùng (Landing) -->
+          <button class="theme-toggle-btn" id="landingThemeToggleBtn" onclick="toggleDarkMode()" title="Chuyển đổi giao diện Sáng / Tối">
+            <span id="landingThemeToggleIcon"></span>
+            <span class="theme-toggle-label" id="landingThemeToggleLabel">Tối</span>
+          </button>
+
+          <button class="btn-nav-login" onclick="openAuthModal('login')">
+            <span>Đăng nhập hệ thống</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Window Card (Pastel Yellow - Le Yen Nhu) -->
+      <section class="hero-window-card" id="heroCard">
+        <div class="window-title-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+            <span class="window-title">DataLens Studio · B2B Enterprise AI Platform</span>
+          </div>
+          <div class="window-status-pill">
+            <span class="status-indicator-dot"></span>
+            AI v2.5 ONLINE
+          </div>
+        </div>
+
+        <div class="hero-card-body">
+          <!-- Left Column -->
+          <div class="hero-left-profile">
+            <div class="avatar-halo-wrapper">
+              <div class="avatar-inner-ring">
+                <img src="/assets/avatar.png?v=2" alt="Lê Yến Như" class="avatar-img" onerror="this.src='https://api.dicebear.com/7.x/lorelei/png?seed=LeYenNhu&size=256&backgroundColor=fef08a'">
+              </div>
+            </div>
+            
+            <div class="profile-name-badge">
+              <span></span> Lê Yến Như · Data Analyst & BI
+            </div>
+
+            <div class="profile-stats-row">
+              <div class="stat-item">
+                <span class="stat-num">4 Bước</span>
+                <span class="stat-lbl">Chuẩn xác</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">10+</span>
+                <span class="stat-lbl">Định dạng</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">Minh bạch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="hero-right-content">
+            <span class="hero-badge-tag">AI-POWERED B2B SALES OPPORTUNITY MANAGEMENT</span>
+
+            <h1 class="hero-main-title">
+              Quản lý và xử lý cơ hội bán hàng B2B thông minh với AI Agent<br>
+              Web của <span class="highlight-author">Lê Yến Như</span>
+            </h1>
+
+            <p class="hero-sub-desc">
+              Hệ thống AI Agent hỗ trợ tự động hóa quy trình tiếp nhận yêu cầu, phân tích dữ liệu khách hàng, thẩm định sản phẩm, kiểm tra tồn kho, tính toán báo giá và quản lý phê duyệt. Giúp mọi doanh nghiệp B2B nâng cao độ chính xác, tiết kiệm 95% thời gian xử lý và kiểm soát toàn diện cơ hội kinh doanh.
+            </p>
+
+            <div class="hero-feature-tags-grid">
+              <div class="feature-tag-pill tag-amber">
+                <span class="tag-num">01</span>
+                <span>Tiếp nhận & Bóc tách NLP</span>
+              </div>
+              <div class="feature-tag-pill tag-orange">
+                <span class="tag-num">02</span>
+                <span>Thẩm định Kho & Bảng giá</span>
+              </div>
+              <div class="feature-tag-pill tag-emerald">
+                <span class="tag-num">03</span>
+                <span>Tính chiết khấu & Hạn mức</span>
+              </div>
+              <div class="feature-tag-pill tag-purple">
+                <span class="tag-num">04</span>
+                <span>Phiếu chuyển duyệt & Báo cáo</span>
+              </div>
+            </div>
+
+            <div class="hero-cta-row">
+              <button class="btn-hero-cta" onclick="handleStartExperience()">
+                <span>Bắt đầu trải nghiệm</span>
+                <span>&rarr;</span>
+              </button>
+              <button class="btn-hero-secondary" onclick="scrollToFeatures()">
+                <span>Tìm hiểu hệ thống</span>
+              </button>
+              <span class="security-badge-text">
+                Bảo mật Session · Phân quyền nội bộ
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Core Feature Groups Section -->
+      <section class="landing-features-section" id="featuresSection">
+        <div class="section-header-center">
+          <span class="section-eyebrow">Năng Lực Cốt Lõi Doanh Nghiệp</span>
+          <h2 class="section-title">4 Nhóm Kỹ Năng Nghiệp Vụ Cốt Lõi Của AI Agent</h2>
+        </div>
+
+        <div class="features-cards-grid">
+          <div class="feature-box-card">
+            <div class="feat-icon-circle"></div>
+            <h3 class="feat-title">1. Phân Tích Yêu Cầu AI</h3>
+            <p class="feat-desc">
+              Tự động đọc hiểu văn bản tự nhiên từ Email và Biểu mẫu. Bóc tách khách hàng, mã sản phẩm, số lượng, ngân sách dự án và thời hạn bàn giao cam kết.
+            </p>
+          </div>
+
+          <div class="feature-box-card">
+            <div class="feat-icon-circle"></div>
+            <h3 class="feat-title">2. Thẩm Định Kho & Danh Mục</h3>
+            <p class="feat-desc">
+              Đối chiếu danh mục sản phẩm chính thức với Master Catalog. Kiểm tra tồn kho khả dụng thời gian thực và đánh giá tính khả thi tiến độ giao hàng.
+            </p>
+          </div>
+
+          <div class="feature-box-card">
+            <div class="feat-icon-circle"></div>
+            <h3 class="feat-title">3. Định Giá & Trình Duyệt Tự Động</h3>
+            <p class="feat-desc">
+              Tính toán đơn giá niêm yết, áp dụng chính sách chiết khấu. Phát hiện trường hợp vượt quyền (> 8% hoặc hợp đồng lớn) để lập Phiếu chuyển duyệt Trưởng phòng.
+            </p>
+          </div>
+
+          <div class="feature-box-card">
+            <div class="feat-icon-circle"></div>
+            <h3 class="feat-title">4. Quản Lý Cơ Hội & Báo Cáo</h3>
+            <p class="feat-desc">
+              Khởi tạo hồ sơ cơ hội B2B chuẩn hóa, quản lý 4 trạng thái nghiệp vụ, tự động soạn dự thảo email phản hồi khách hàng và xuất báo cáo Word/Excel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Landing Footer -->
+      <footer class="landing-footer" id="contactSection">
+        <div>
+          <b>NỀN TẢNG B2B SALES AI AGENT</b> — Hệ Thống Tự Động Hóa Xử Lý Cơ Hội Bán Hàng Cho Mọi Doanh Nghiệp.
+        </div>
+        <div>
+          Chủ nhiệm đề án: <b>Lê Yến Như</b> | Hotline: 1900 6868 | Email: contact@b2baiagent.vn
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       2. PUBLIC AREA: AUTHENTICATION MODAL (LOGIN & SIGN UP POPUP TABS)
+       ==================================================================== -->
+  <div id="publicLoginView" class="auth-modal-overlay">
+    <div class="login-modal-box">
+      <button type="button" class="btn-close-welcome" onclick="closeAuthModal()" style="position:absolute; top:20px; right:20px;" title="Đóng cửa sổ đăng nhập">&times;</button>
+      <div class="login-header-center">
+        <div class="login-brand-logo" style="font-weight:800;">B2B</div>
+        <div style="display:inline-block; margin-bottom:8px; padding:4px 14px; border-radius:20px; background:#fef3c7; border:1px solid #fde68a; font-size:11.5px; font-weight:700; color:#b45309;">
+          XÁC THỰC TRƯỚC KHI VÀO BƯỚC 1 XUẤT DỮ LIỆU
+        </div>
+        <h2 class="login-title" id="authBoxTitle">Đăng Nhập / Tạo Tài Khoản</h2>
+        <p class="login-subtitle" id="authBoxSubtitle">Vui lòng đăng nhập hoặc tạo tài khoản để vào trang chính và bắt đầu phân tích dữ liệu</p>
+      </div>
+
+      <!-- Auth Switch Tabs (Login vs Register) -->
+      <div style="display:flex; background:#f1f5f9; border-radius:12px; padding:4px; margin-bottom:20px;">
+        <button type="button" id="tabBtnLogin" onclick="switchAuthMode('login')" style="flex:1; border:none; padding:9px; border-radius:10px; font-weight:700; font-size:13px; cursor:pointer; background:#fff; color:#b45309; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
+          ĐĂNG NHẬP
+        </button>
+        <button type="button" id="tabBtnRegister" onclick="switchAuthMode('register')" style="flex:1; border:none; padding:9px; border-radius:10px; font-weight:600; font-size:13px; cursor:pointer; background:transparent; color:#64748b;">
+          ĐĂNG KÝ MỚI
+        </button>
+      </div>
+
+      <!-- Notification Alerts -->
+      <div id="loginErrorAlert" style="display:none; background:#fee2e2; border:1px solid #f87171; color:#b91c1c; padding:10px; border-radius:10px; font-size:12.5px; margin-bottom:14px;">
+        <!-- Error text -->
+      </div>
+      <div id="loginSuccessAlert" style="display:none; background:#ecfdf5; border:1px solid #34d399; color:#065f46; padding:10px; border-radius:10px; font-size:12.5px; margin-bottom:14px;">
+        <!-- Success text -->
+      </div>
+
+      <!-- 1. LOGIN FORM -->
+      <form id="loginForm" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Email hoặc Tên đăng nhập</label>
+          <div class="form-input-wrap">
+            <input type="text" id="loginEmail" class="form-input" placeholder="admin@minhan.com.vn" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Mật khẩu</label>
+          <div class="form-input-wrap">
+            <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
+            <button type="button" class="btn-toggle-pwd" onclick="togglePasswordVisibility('loginPassword')"></button>
+          </div>
+        </div>
+
+        <div class="login-extra-row">
+          <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+            <input type="checkbox" id="rememberMeCheckbox" checked>
+            <span>Ghi nhớ đăng nhập</span>
+          </label>
+          <a href="javascript:void(0)" onclick="navigateTo('landing')" style="color:#b45309; text-decoration:none; font-weight:600;">&larr; Về trang chủ</a>
+        </div>
+
+        <button type="submit" class="btn-submit-login">
+          <span>ĐĂNG NHẬP VÀO HỆ THỐNG</span>
+        </button>
+      </form>
+
+      <!-- 2. REGISTER FORM -->
+      <form id="registerForm" style="display:none;" onsubmit="handleRegisterSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Họ và tên của bạn</label>
+          <input type="text" id="regName" class="form-input" placeholder="Ví dụ: Hoàng Minh Tuấn" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email đăng ký</label>
+          <input type="email" id="regEmail" class="form-input" placeholder="tuan.hoang@company.com" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label class="form-label">Số điện thoại</label>
+            <input type="text" id="regPhone" class="form-input" placeholder="0912xxxxxx">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tên công ty / Doanh nghiệp</label>
+            <input type="text" id="regCompany" class="form-input" placeholder="Tập đoàn An Nam">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Loại tài khoản / Vai trò</label>
+          <select id="regRoleCode" class="form-input" style="padding:10px 12px;">
+            <option value="CUSTOMER">Khách hàng Doanh nghiệp (Gửi & theo dõi yêu cầu báo giá)</option>
+            <option value="SALES_REP">Chuyên viên Kinh doanh B2B (Tiếp nhận & xử lý cơ hội)</option>
+          </select>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label class="form-label">Mật khẩu (tối thiểu 6 ký tự)</label>
+            <div class="form-input-wrap">
+              <input type="password" id="regPassword" class="form-input" placeholder="••••••••" required minlength="6">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Xác nhận mật khẩu</label>
+            <div class="form-input-wrap">
+              <input type="password" id="regConfirmPassword" class="form-input" placeholder="••••••••" required minlength="6">
+            </div>
+          </div>
+        </div>
+
+        <div class="login-extra-row">
+          <span style="font-size:12px; color:#64748b;">Bằng việc đăng ký, bạn đồng ý với quy chế bảo mật nền tảng B2B.</span>
+          <a href="javascript:void(0)" onclick="navigateTo('landing')" style="color:#b45309; text-decoration:none; font-weight:600;">&larr; Về trang chủ</a>
+        </div>
+
+        <button type="submit" class="btn-submit-login" style="background:linear-gradient(135deg, #10b981 0%, #059669 100%);">
+          <span>TẠO TÀI KHOẢN MỚI NGAY</span>
+        </button>
+      </form>
+
+      <!-- Quick 1-Click Demo Accounts -->
+      <div class="demo-accounts-pill-box">
+        <div class="demo-acc-title">BẢNG TÀI KHOẢN XÁC THỰC BẢO MẬT & PHÂN QUYỀN:</div>
+        <p style="font-size:11.5px; color:#64748b; margin-bottom:10px;">
+          *Hệ thống kiểm tra mật khẩu thực tế. Bạn có thể thử nhập sai mật khẩu để kiểm tra tính năng bảo mật (Validation Error).
+        </p>
+        <div class="demo-pills-list">
+          <button class="demo-pill-btn" onclick="fillDemoAccount('admin@minhan.com.vn', 'admin123')">
+            <div>
+              <div style="font-weight:700;">Lê Yến Như (Admin / AI Architect)</div>
+              <small style="color:#64748b;">admin@minhan.com.vn | Pass: <code>admin123</code></small>
+            </div>
+            <span style="color:#b45309; font-weight:700;">Điền &rarr;</span>
+          </button>
+
+          <button class="demo-pill-btn" onclick="fillDemoAccount('tuan.le@minhan.com.vn', 'manager123')">
+            <div>
+              <div style="font-weight:700;">Lê Văn Tuấn (Trưởng phòng Kinh doanh)</div>
+              <small style="color:#64748b;">tuan.le@minhan.com.vn | Pass: <code>manager123</code></small>
+            </div>
+            <span style="color:#b45309; font-weight:700;">Điền &rarr;</span>
+          </button>
+
+          <button class="demo-pill-btn" onclick="fillDemoAccount('an.nguyen@minhan.com.vn', 'sales123')">
+            <div>
+              <div style="font-weight:700;">Nguyễn Văn An (Chuyên viên Sales B2B)</div>
+              <small style="color:#64748b;">an.nguyen@minhan.com.vn | Pass: <code>sales123</code></small>
+            </div>
+            <span style="color:#b45309; font-weight:700;">Điền &rarr;</span>
+          </button>
+
+          <button class="demo-pill-btn" onclick="fillDemoAccount('user@digitech.vn', 'user123')">
+            <div>
+              <div style="font-weight:700;">Trần Văn Hùng (Khách hàng DigiTech)</div>
+              <small style="color:#64748b;">user@digitech.vn | Pass: <code>user123</code></small>
+            </div>
+            <span style="color:#b45309; font-weight:700;">Điền &rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       3. PRIVATE AREA: ENTERPRISE SAAS SYSTEM (SAU KHI ĐĂNG NHẬP)
+       ==================================================================== -->
+  <div id="privateAppView">
+    <div class="saas-layout">
+      <!-- Fixed Left Sidebar (Warm Golden Amber Enterprise Theme) -->
+      <aside class="saas-sidebar">
+        <div class="sidebar-header-gold">
+          <div class="infinity-badge-gold miffy-brand-badge">
+            <span class="non-miffy-only-el">&infin;</span>
+            <svg class="miffy-only-el miffy-svg-avatar" viewBox="0 0 64 64" width="38" height="38" aria-label="Miffy">
+              <!-- Miffy Ears -->
+              <ellipse cx="22" cy="18" rx="6.2" ry="15" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+              <ellipse cx="42" cy="18" rx="6.2" ry="15" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+              <!-- Miffy Head -->
+              <ellipse cx="32" cy="40" rx="20" ry="16.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+              <!-- Cover ear seam -->
+              <ellipse cx="32" cy="39" rx="18" ry="14" fill="#FFFFFF"/>
+              <!-- Miffy Eyes -->
+              <circle cx="24" cy="39" r="2.2" fill="#2B241D"/>
+              <circle cx="40" cy="39" r="2.2" fill="#2B241D"/>
+              <!-- Miffy Signature X Mouth -->
+              <path d="M29.4 44.2 L34.6 47.4 M34.6 44.2 L29.4 47.4" stroke="#2B241D" stroke-width="2.1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="brand-text-gold-col">
+            <div class="brand-name-bold">Lê Yến Như</div>
+            <div class="brand-sub-gold">DATA ANALYST & BI</div>
+          </div>
+        </div>
+
+        <ul class="sidebar-menu">
+          <li>
+            <a class="menu-link active" data-page="page-dashboard" onclick="openSaasPage('page-dashboard')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">1. Tổng quan (Dashboard)</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-ingestion" onclick="openSaasPage('page-ingestion')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">2. Bối cảnh & Nhập liệu thô</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-parsing" onclick="openSaasPage('page-parsing')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">3. Làm sạch & Xác nhận dữ liệu</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-opportunities" onclick="openSaasPage('page-opportunities')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">4. Quản lý cơ hội</span>
+              <span class="sidebar-badge-num" id="sidebarOppCount">0</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-validation" onclick="openSaasPage('page-validation')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">5. Thẩm định kho & giá</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-pricing" onclick="openSaasPage('page-pricing')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">6. Báo giá & Chiết khấu</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-approval" onclick="openSaasPage('page-approval')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">7. Phê duyệt</span>
+              <span class="sidebar-badge-num badge-amber" id="sidebarPendingCount">0</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-reports" onclick="openSaasPage('page-reports')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">8. Báo cáo & Thống kê</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-audit" onclick="openSaasPage('page-audit')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">9. Đối chiếu & Giám sát</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" data-page="page-settings" onclick="openSaasPage('page-settings')">
+              <span class="menu-icon"></span>
+              <span class="menu-label">10. Cài đặt hệ thống</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" href="/slides.html" target="_blank">
+              <span class="menu-icon"></span>
+              <span class="menu-label">Slide Thuyết Trình</span>
+            </a>
+          </li>
+          <li>
+            <a class="menu-link" onclick="handleLogout()">
+              <span class="menu-icon"></span>
+              <span class="menu-label">Đăng Xuất</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Bottom Reset & Status Card (Golden Amber Theme) -->
+        <div class="sidebar-reset-card">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+            <span style="font-size:16px;"></span>
+            <span style="font-size:12px; font-weight:800; color:#b45309;">HỆ THỐNG DOANH NGHIỆP</span>
+          </div>
+          <p style="font-size:11px; color:#64748b; margin:0 0 10px 0; line-height:1.4;">Tự động hóa đối soát & phân tích dữ liệu đa ngành</p>
+          <button class="btn-secondary-tool" style="width:100%; border-radius:14px; font-weight:700; font-size:11.5px; padding:7px 10px;" onclick="handleClearAllData()">
+            Reset Về Trống (0)
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content Wrapper -->
+      <div class="saas-main-wrapper">
+        <!-- Sticky Header Bar (ctth.vercel.app Layout Style in Golden Amber) -->
+        <header class="saas-top-header" style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div class="header-main-title-gold">Bảng Điều Khiển Quản Trị</div>
+            <div class="header-search-bar-pill">
+              <span></span>
+              <input type="text" placeholder="Tìm kiếm cửa hàng, giao dịch, ngành hàng...">
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:10px;">
+            <!-- Bộ Chuyển Đổi Ngôn Ngữ Agent (Tiếng Việt / English) Góc Phải -->
+            <div class="agent-lang-switcher" id="agentLangSwitcher" title="Chuyển đổi ngôn ngữ / Switch Language">
+              <button type="button" class="lang-opt-btn active" id="btnLangVi" onclick="setAgentLanguage('vi')">Tiếng Việt</button>
+              <button type="button" class="lang-opt-btn" id="btnLangEn" onclick="setAgentLanguage('en')">English</button>
+            </div>
+            
+            <!-- Nút Chuyển Giao Diện Sáng / Tối Ở Góc Phải Trên Cùng (App) -->
+            <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" title="Chuyển đổi giao diện Sáng / Tối">
+              <span id="themeToggleIcon"></span>
+              <span class="theme-toggle-label" id="themeToggleLabel">Tối</span>
+            </button>
+
+            <button class="header-icon-btn" style="border-radius:50%; position:relative;" onclick="openSaasPage('page-approval')" title="Thông báo duyệt">
+              <span></span>
+              <span class="badge-dot" id="headerNotifDot"></span>
+            </button>
+
+            <!-- User Chip Avatar -->
+            <div class="header-user-chip" onclick="openSaasPage('page-profile')" title="Xem hồ sơ">
+              <img src="/assets/avatar.png?v=2" class="header-user-avatar" alt="Avatar">
+              <div>
+                <div class="header-user-name">Lê Yến Như</div>
+                <div class="header-user-role">DATA ANALYST & BI</div>
+              </div>
+            </div>
+
+            <button class="header-icon-btn" style="border-radius:50%;" onclick="handleLogout()" title="Đăng xuất">
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Dynamic Page Container -->
+        <main class="saas-view-container">
+
+          <!-- 1. Enterprise BI AI Agent Dark Navy Banner -->
+          <div class="navy-enterprise-banner">
+            <div style="display:flex; align-items:center; gap:14px;">
+              <div class="banner-robot-box"></div>
+              <div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <span style="font-size:15px; font-weight:800; color:#ffffff;">Enterprise BI AI Agent</span>
+                  <span class="banner-hitl-badge">AI & Human-in-the-Loop</span>
+                </div>
+                <div style="font-size:11.5px; color:#94a3b8; margin-top:3px;">
+                  Hệ thống Phân tích Bối cảnh, Chuẩn hóa, Làm sạch Dữ liệu & Khởi tạo Dashboard Tự động
+                </div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <a href="/slides.html" target="_blank" class="btn-banner-slide">
+                <span>Quay lại Slide</span>
+              </a>
+              <button class="btn-banner-reset" onclick="handleClearAllData()" title="Làm sạch toàn bộ dữ liệu">
+                <span>Phiên làm việc mới (Làm trống)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Stepper Card (Warm Golden Theme) -->
+          <div class="stepper-pastel-card" id="fourStepsWorkflowBar">
+            <div class="stepper-grid-gold">
+              <!-- Step 1 -->
+              <div class="step-pastel-box active" id="flowStepCard1" onclick="openSaasPage('page-ingestion')">
+                <div style="display:flex; align-items:center;">
+                  <div class="step-circle-num" id="flowStepBadge1">1</div>
+                  <div class="step-meta-col">
+                    <div class="step-text-title">BƯỚC 1: BỐI CẢNH & NHẬP LIỆU THÔ</div>
+                    <div class="step-text-sub">Nhập bối cảnh • Nạp tệp dữ liệu</div>
+                  </div>
+                </div>
+                <div class="step-pill-tag gold-active" id="flowStepPill1">Đang thực hiện</div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-pastel-box" id="flowStepCard2" onclick="openSaasPage('page-parsing')">
+                <div style="display:flex; align-items:center;">
+                  <div class="step-circle-num" id="flowStepBadge2">2</div>
+                  <div class="step-meta-col">
+                    <div class="step-text-title">BƯỚC 2: TIẾP NHẬN, LÀM SẠCH & XÁC NHẬN</div>
+                    <div class="step-text-sub">Làm sạch dữ liệu • Xác nhận dữ liệu sạch</div>
+                  </div>
+                </div>
+                <div class="step-pill-tag" id="flowStepPill2">Chờ</div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-pastel-box" id="flowStepCard3" onclick="openSaasPage('page-pricing')">
+                <div style="display:flex; align-items:center;">
+                  <div class="step-circle-num" id="flowStepBadge3">3</div>
+                  <div class="step-meta-col">
+                    <div class="step-text-title">BƯỚC 3: THẨM ĐỊNH & BÁO GIÁ</div>
+                    <div class="step-text-sub">Kiểm tra tồn kho • Tính chiết khấu</div>
+                  </div>
+                </div>
+                <div class="step-pill-tag" id="flowStepPill3">Chờ</div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="step-pastel-box" id="flowStepCard4" onclick="openSaasPage('page-approval')">
+                <div style="display:flex; align-items:center;">
+                  <div class="step-circle-num" id="flowStepBadge4">4</div>
+                  <div class="step-meta-col">
+                    <div class="step-text-title">BƯỚC 4: PHÊ DUYỆT & BÁO CÁO</div>
+                    <div class="step-text-sub">Trưởng phòng duyệt • Xuất Dashboard</div>
+                  </div>
+                </div>
+                <div class="step-pill-tag" id="flowStepPill4">Chờ</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guided Automated Workflow Bar (Tự Động Hóa Có Xác Nhận) -->
+          <div class="guided-flow-bar" id="guidedFlowBar" style="display:none;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="pulse-indicator"></span>
+              <div>
+                <div style="font-size:11.5px; font-weight:800; color:#b45309; text-transform:uppercase; letter-spacing:0.5px;">LUỒNG TỰ ĐỘNG HÓA 5 BƯỚC (HUMAN-IN-THE-LOOP)</div>
+                <div id="guidedFlowStepName" style="font-size:14px; font-weight:800; color:#1e293b; margin-top:2px;">
+                  Đang ở Bước 1: Tiếp nhận yêu cầu
+                </div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <button class="btn-flow-reset" onclick="handleClearAllData()" title="Hủy bỏ luồng này và reset dữ liệu về trống (0)">
+                <span>Reset về 0</span>
+              </button>
+              <button class="btn-primary-action glow-action-btn" id="btnNextGuidedStep" onclick="executeCurrentGuidedStep()">
+                <span id="btnNextGuidedStepLabel">Bắt Đầu Xử Lý & Xác Nhận Bóc Tách &rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 3: DASHBOARD - TỔNG QUAN
+               ------------------------------------------------------------- -->
+          <div id="page-dashboard" class="saas-page active">
+            <!-- Dynamic Role Welcome Banner -->
+            <div id="userRoleGreetingBanner" style="margin-bottom:20px; padding:14px 20px; border-radius:14px; background:#fffdf0; border:1.5px solid #fde68a; display:flex; justify-content:space-between; align-items:center;">
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div class="miffy-only-el miffy-welcome-art" aria-hidden="true">
+                  <svg viewBox="0 0 80 96" width="54" height="64">
+                    <!-- Ears -->
+                    <ellipse cx="30" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+                    <ellipse cx="50" cy="18" rx="6.5" ry="15.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+                    <!-- Head -->
+                    <ellipse cx="40" cy="40" rx="20.5" ry="17" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+                    <ellipse cx="40" cy="39" rx="18.5" ry="14.5" fill="#FFFFFF"/>
+                    <!-- Face -->
+                    <circle cx="32" cy="39.5" r="2.2" fill="#2B241D"/>
+                    <circle cx="48" cy="39.5" r="2.2" fill="#2B241D"/>
+                    <path d="M37.5 44.5 L42.5 47.7 M42.5 44.5 L37.5 47.7" stroke="#2B241D" stroke-width="2.1" stroke-linecap="round"/>
+                    <!-- Arms -->
+                    <path d="M23 60 C16 62 15 70 21 72" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6" stroke-linecap="round"/>
+                    <path d="M57 60 C64 62 65 70 59 72" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6" stroke-linecap="round"/>
+                    <!-- Iconic Bruna Orange Dress -->
+                    <path d="M24 56 L56 56 L62 84 L18 84 Z" fill="#F37021" stroke="#2B241D" stroke-width="2.6" stroke-linejoin="round"/>
+                    <!-- Feet -->
+                    <ellipse cx="31" cy="87" rx="7" ry="4" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.5"/>
+                    <ellipse cx="49" cy="87" rx="7" ry="4" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.5"/>
+                  </svg>
+                </div>
+                <div style="font-size:24px;" id="roleGreetingIcon"></div>
+                <div>
+                  <div style="font-size:14.5px; font-weight:800; color:#1e293b;" id="roleGreetingTitle">Chào mừng Lê Yến Như</div>
+                  <div style="font-size:12.5px; color:#64748b;" id="roleGreetingDesc">Bạn đang đăng nhập với tư cách Quản trị viên (Admin)</div>
+                </div>
+              </div>
+              <span class="badge-tag eligible" id="roleGreetingBadge" style="font-size:12px; padding:6px 14px;">Quyền Toàn Cục</span>
+            </div>
+
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title" id="dashRoleHeaderTitle">Tổng Quan Tình Hình Xử Lý Cơ Hội B2B</h1>
+                <p class="page-main-sub">Theo dõi thời gian thực các chỉ số theo thẩm quyền của bạn</p>
+              </div>
+              <button class="btn-primary-action" onclick="openSaasPage('page-ingestion')">
+                <span>Tạo yêu cầu mới</span>
+              </button>
+            </div>
+
+            <!-- 4 Metric Cards -->
+            <div class="saas-stats-grid">
+              <div class="stat-metric-card color-eligible">
+                <div class="stat-top-row">
+                  <span class="stat-card-label">CÓ THỂ TIẾP TỤC</span>
+                  
+                </div>
+                <div class="stat-card-val" id="dashCountEligible">0</div>
+                <div class="stat-card-money" id="dashValEligible">0 đ</div>
+              </div>
+
+              <div class="stat-metric-card color-pending">
+                <div class="stat-top-row">
+                  <span class="stat-card-label">CHỜ TRƯỞNG PHÒNG DUYỆT</span>
+                  <span></span>
+                </div>
+                <div class="stat-card-val" id="dashCountPending">0</div>
+                <div class="stat-card-money" style="color:#7c3aed;" id="dashValPending">0 đ</div>
+              </div>
+
+              <div class="stat-metric-card color-missing">
+                <div class="stat-top-row">
+                  <span class="stat-card-label">CẦN BỔ SUNG THÔNG TIN</span>
+                  <span></span>
+                </div>
+                <div class="stat-card-val" id="dashCountMissing">0</div>
+                <div class="stat-card-money" style="color:#94a3b8; font-style:italic;">Chưa có dữ liệu</div>
+              </div>
+
+              <div class="stat-metric-card color-unfulfilled">
+                <div class="stat-top-row">
+                  <span class="stat-card-label">CHƯA ĐÁP ỨNG</span>
+                  <span></span>
+                </div>
+                <div class="stat-card-val" id="dashCountUnfulfilled">0</div>
+                <div class="stat-card-money" style="color:#94a3b8; font-style:italic;">Chưa có dữ liệu</div>
+              </div>
+            </div>
+
+            <!-- Charts & List Grid -->
+            <div style="display:grid; grid-template-columns: 2fr 1fr; gap:24px;">
+              <div class="saas-card">
+                <div class="saas-card-title-row">
+                  <div class="saas-card-title">
+                    <span>Cơ Hội Bán Hàng Cần Xử Lý</span>
+                  </div>
+                  <button class="btn-secondary-tool" onclick="openSaasPage('page-opportunities')">Xem tất cả &rarr;</button>
+                </div>
+                <table class="saas-table">
+                  <thead>
+                    <tr>
+                      <th>Mã</th>
+                      <th>Khách Hàng</th>
+                      <th>Trạng Thái</th>
+                      <th>Giá Trị</th>
+                      <th>Sales</th>
+                      <th>Thao Tác</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dashTableBody">
+                    <!-- Dynamic Rows -->
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="saas-card">
+                <div class="saas-card-title-row">
+                  <div class="saas-card-title">
+                    <span>Phân Bổ Trạng Thái</span>
+                  </div>
+                </div>
+                <div style="height:240px; position:relative;">
+                  <canvas id="saasStatusChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 4: TIẾP NHẬN YÊU CẦU
+               ------------------------------------------------------------- -->
+          <!-- =============================================================
+               PAGE: TIẾP NHẬN YÊU CẦU & BỐI CẢNH (BƯỚC 1A & 1B SPLIT INPUT)
+               ============================================================= -->
+          <div id="page-ingestion" class="saas-page">
+            <div class="split-input-grid">
+              <!-- CỘT 1A: Bối cảnh Doanh nghiệp (Business Context) -->
+              <div class="card-pastel-container">
+                <div style="display:flex; align-items:center;">
+                  <span class="badge-step-blue">BƯỚC 1A</span>
+                  <span class="badge-step-title">Bối cảnh Doanh nghiệp (Business Context)</span>
+                </div>
+                <div class="context-sub-desc">Nhập thông tin bối cảnh để AI phân tích sát thực tế</div>
+
+                <div style="margin-top:14px; display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                  <div>
+                    <label style="font-size:12px; font-weight:700; color:#334155; margin-bottom:4px; display:block;">Tên Doanh nghiệp / Dự án <span style="color:#ef4444;">*</span></label>
+                    <input type="text" id="ctxCompanyName" class="input-pastel" value="" placeholder="Nhập tên doanh nghiệp / dự án..." oninput="this.style.border=''">
+                  </div>
+                  <div>
+                    <label style="font-size:12px; font-weight:700; color:#334155; margin-bottom:4px; display:block;">Ngành nghề / Lĩnh vực hoạt động</label>
+                    <input type="text" id="ctxIndustry" class="input-pastel" value="" placeholder="Nhập ngành nghề / lĩnh vực...">
+                  </div>
+                </div>
+
+                <div style="margin-top:12px;">
+                  <label style="font-size:12px; font-weight:700; color:#334155; margin-bottom:4px; display:block;">Đối tượng xem Báo cáo / Dashboard</label>
+                  <input type="text" id="ctxAudience" class="input-pastel" value="" placeholder="Nhập đối tượng xem (VD: Ban Giám Đốc)...">
+                </div>
+
+                <div style="margin-top:12px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                    <label style="font-size:12px; font-weight:700; color:#334155; margin:0;">Bối cảnh & Mục tiêu Phân tích Số liệu <span style="color:#ef4444;">*</span></label>
+                    <button type="button" style="background:none; border:none; color:var(--gold-primary); font-size:11.5px; font-weight:700; cursor:pointer;" onclick="fillRetailSampleContext()">Mẫu gợi ý bán lẻ</button>
+                  </div>
+                  <textarea id="ctxGoals" class="textarea-pastel" rows="3" placeholder="Mô tả bối cảnh hiện tại của doanh nghiệp và mục tiêu phân tích (VD: Phân tích doanh thu, chi phí, công nợ, dòng tiền hoặc hiệu suất bán hàng...)" oninput="this.style.border=''"></textarea>
+                </div>
+
+                <div style="margin-top:12px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <label style="font-size:12px; font-weight:700; color:#334155; margin:0;">
+                      Đầu ra mong muốn <span style="font-size:11px; font-weight:normal; color:#64748b;">(Có thể chọn nhiều)</span>
+                    </label>
+                    <span style="font-size:11.5px; color:var(--gold-primary); font-weight:700;">Đã chọn: <span id="selectedOutputLabel">Dashboard</span></span>
+                  </div>
+                  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button type="button" class="btn-output-pill active" data-type="dashboard" onclick="toggleOutputPill('dashboard', this)">Dashboard</button>
+                    <button type="button" class="btn-output-pill" data-type="report" onclick="toggleOutputPill('report', this)">Báo cáo</button>
+                    <button type="button" class="btn-output-pill" data-type="html" onclick="toggleOutputPill('html', this)">HTML</button>
+                  </div>
+                </div>
+
+                <div style="margin-top:auto; padding-top:16px; display:flex; justify-content:space-between; align-items:center; border-top:1px dashed var(--yellow-border);">
+                  <span style="font-size:11.5px; color:#94a3b8;">AI Agent sẽ bám sát tiêu chí an toàn & bối cảnh này</span>
+                  <button type="button" style="background:none; border:none; color:#94a3b8; font-size:11.5px; cursor:pointer;" onclick="clearContextInputs()">Làm trống ô</button>
+                </div>
+              </div>
+
+              <!-- CỘT 1B: Dữ liệu Đầu vào (Raw Data Input) -->
+              <div class="card-pastel-container">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                  <div>
+                    <div style="display:flex; align-items:center;">
+                      <span class="badge-step-blue">BƯỚC 1B</span>
+                      <span class="badge-step-title">File Dữ liệu Thô (Raw Data File) <span style="color:#ef4444;">*</span></span>
+                    </div>
+                    <div class="context-sub-desc">Bắt buộc tải lên tệp dữ liệu thô (CSV, Excel, JSON, TXT) để chuyển sang Bước 2</div>
+                  </div>
+                  <div>
+                    <input type="file" id="fileUploadInput" onchange="handleFileUploadSim(event)" style="display:none;">
+                    <button type="button" id="btnUploadRawFile" class="btn-upload-file-gold" onclick="document.getElementById('fileUploadInput').click()">
+                      <span>Tải file lên (CSV / Excel / JSON) *</span>
+                    </button>
+                  </div>
+                </div>
+
+                <textarea id="pageIngestTextarea" class="textarea-raw-data" placeholder="Nội dung tệp dữ liệu thô sẽ hiển thị tại đây sau khi bạn bấm 'Tải file lên (CSV / Excel / JSON)' ở góc phải..."></textarea>
+
+                <div style="margin-top:auto; padding-top:16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; border-top:1px dashed var(--yellow-border);">
+                  <div style="font-size:12px; color:#64748b;" id="rawInputStatusNote">
+                    Chưa có tệp dữ liệu. Bắt buộc tải lên file dữ liệu thô để chuyển sang Bước 2.
+                  </div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <button type="button" class="btn-secondary-tool" style="border-radius:20px; font-weight:700; padding:8px 14px;" onclick="loadTestCaseToForm(3)" title="Nạp 60k dòng dữ liệu mẫu nhanh">
+                      <span>Nạp 60k Dòng Mẫu</span>
+                    </button>
+                    <button type="button" class="btn-gold-sparkle" onclick="runIngestToParsing()">
+                      <span>Phân Tích Bối Cảnh & Kiểm Tra Định Dạng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 5: PHÂN TÍCH YÊU CẦU AI (2-COLUMN SPLIT VIEW)
+               ------------------------------------------------------------- -->
+          <div id="page-parsing" class="saas-page">
+            <!-- Stepper Quy Trình Có Sự Giám Sát Của Con Người -->
+            <div class="human-checkpoint-stepper">
+              <div class="step-item done" onclick="openSaasPage('page-ingestion')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">1. Tiếp Nhận</div>
+                  <div class="step-sub">Nạp văn bản/file</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item active">
+                <div class="step-circle">2</div>
+                <div class="step-text">
+                  <div class="step-title">2. Bóc Tách Thực Thể</div>
+                  <div class="step-sub">Checkpoint 1: Xác nhận bóc tách</div>
+                </div>
+              </div>
+              <div class="step-connector"></div>
+              <div class="step-item">
+                <div class="step-circle">3</div>
+                <div class="step-text">
+                  <div class="step-title">3. Thẩm Định Kho</div>
+                  <div class="step-sub">Checkpoint 1.2: Đối chiếu tồn</div>
+                </div>
+              </div>
+              <div class="step-connector"></div>
+              <div class="step-item">
+                <div class="step-circle">4</div>
+                <div class="step-text">
+                  <div class="step-title">4. Tính Giá & Chiết Khấu</div>
+                  <div class="step-sub">Kiểm soát hạn mức duyệt</div>
+                </div>
+              </div>
+              <div class="step-connector"></div>
+              <div class="step-item">
+                <div class="step-circle">5</div>
+                <div class="step-text">
+                  <div class="step-title">5. Phê Duyệt Cấp Trên</div>
+                  <div class="step-sub">Checkpoint 2: Quản lý chốt</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Bước 2: Tiếp Nhận, Làm Sạch & Xác Nhận Dữ Liệu Sạch</h1>
+                <p class="page-main-sub">AI Agent bóc tách thực thể, tự động làm sạch chuẩn hóa và yêu cầu Con người (HITL) xác nhận dữ liệu sạch trước khi chuyển tiếp</p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <button class="btn-primary-action" onclick="openCheckpoint1Modal()">Chuyển sang Bước 3: Thẩm định kho &rarr;</button>
+                <button class="btn-secondary-tool" onclick="openSaasPage('page-opportunities')">Xem danh sách cơ hội</button>
+              </div>
+            </div>
+
+            <!-- LUỒNG YÊU CẦU LỆNH CHO AI AGENT (USER COMMAND FLOW — BƯỚC 2) -->
+            <div class="saas-card" id="step2CommandFlowCard" style="margin-top:16px; border-left:4px solid #2D6BA8;">
+              <div class="saas-card-title-row" style="margin-bottom:10px; flex-wrap:wrap; gap:10px;">
+                <div>
+                  <div class="saas-card-title" style="display:flex; align-items:center; gap:8px; color:#1d4ed8; flex-wrap:wrap;">
+                    <span>LUỒNG YÊU CẦU LỆNH CHO AI AGENT (BƯỚC 2)</span>
+                    <span class="badge-tag eligible" id="step2CmdCountBadge" style="font-size:11px;">0 lệnh đã chạy</span>
+                  </div>
+                  <div style="font-size:12px; color:#64748b; margin-top:2px;">
+                    Nhập lệnh tiếng Việt tự nhiên để yêu cầu AI Agent xử lý trực tiếp trên dữ liệu thô (xóa trùng lặp, lọc dữ liệu, thay thế giá trị, chuẩn hóa, sắp xếp...).
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                  <button type="button" class="btn-primary-action" style="font-size:11.5px; padding:5px 12px; background:#2D6BA8 !important;" onclick="runDeepErrorDetectionFlow(true)">
+                    <span>Quét & Liệt Kê Lỗi Sâu (7 Tiêu Chí)</span>
+                  </button>
+                  <button type="button" id="btnUndoStep2Command" class="btn-secondary-tool" style="font-size:11.5px; padding:5px 12px;" onclick="undoLastStep2Command()" disabled>
+                    <span>Hoàn Tác Lệnh Vừa Chạy</span>
+                  </button>
+                  <button type="button" class="btn-secondary-tool" style="font-size:11.5px; padding:5px 12px;" onclick="restoreOriginalStep2Data()">
+                    <span>Khôi Phục Dữ Liệu Gốc</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Thanh nhập lệnh -->
+              <div style="display:flex; gap:10px; align-items:stretch; flex-wrap:wrap; margin-bottom:10px;">
+                <input
+                  type="text"
+                  id="step2CommandInput"
+                  class="input-pastel"
+                  style="flex:1; min-width:260px; padding:10px 14px; font-size:13px;"
+                  placeholder="Nhập yêu cầu cho AI Agent... (VD: Liệt kê dòng lỗi, Xóa dòng lỗi, Sửa dòng 1 cột Quantity thành 20, Chuẩn hóa ngày tháng, Xóa dòng lặp 100%)"
+                  onkeydown="if(event.key==='Enter'){ event.preventDefault(); executeStep2UserCommand(); }"
+                >
+                <button type="button" class="btn-primary-action" style="padding:10px 18px; font-size:13px; white-space:nowrap;" onclick="executeStep2UserCommand()">
+                  <span>Thực Thi Lệnh AI</span>
+                </button>
+              </div>
+
+              <!-- Lệnh gợi ý nhanh -->
+              <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:12px;">
+                <span style="font-size:11.5px; font-weight:700; color:#64748b;">Lệnh nhanh:</span>
+                <button type="button" class="btn-cmd-chip" onclick="runQuickStep2Command('Liệt kê toàn bộ dữ liệu lỗi')">Liệt kê toàn bộ dòng lỗi</button>
+                <button type="button" class="btn-cmd-chip" onclick="runQuickStep2Command('Xóa toàn bộ dòng lặp 100%')">Xóa toàn bộ dòng lặp 100%</button>
+                <button type="button" class="btn-cmd-chip" onclick="runQuickStep2Command('Chuẩn hóa ô trống, số âm & ngày tháng')">Chuẩn hóa ô trống, số âm & ngày</button>
+                <button type="button" class="btn-cmd-chip" onclick="runQuickStep2Command('Xóa các dòng có lỗi / thiếu dữ liệu')">Xóa dòng lỗi / thiếu</button>
+                <button type="button" class="btn-cmd-chip" onclick="runQuickStep2Command('Xóa khoảng trắng thừa tất cả cột')">Xóa khoảng trắng thừa</button>
+              </div>
+
+              <!-- LUỒNG PHÁT HIỆN LỖI & LIỆT KÊ DỮ LIỆU MỚI (LIÊN KẾT TRỰC TIẾP VỚI LỆNH AI) -->
+              <div id="step2LinkedErrorDetectionBox" style="background:#FFFFFF; border:1.8px solid #EFE3C2; border-radius:14px; padding:12px 14px; margin-bottom:12px;">
+                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+                  <div style="font-size:12.5px; font-weight:800; color:#1e293b;">
+                    LUỒNG PHÁT HIỆN LỖI TỰ ĐỘNG & LIỆT KÊ DỮ LIỆU MỚI SAU LỆNH
+                  </div>
+                  <span class="badge-tag pending" id="step2DetectedErrorSummaryBadge" style="font-size:11px;">Chờ quét dữ liệu</span>
+                </div>
+
+                <!-- Các nhóm lỗi phát hiện (bấm để gửi lệnh xử lý ngay) -->
+                <div id="step2ErrorCategoryPills" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px;"></div>
+
+                <!-- Bảng liệt kê trực tiếp các dòng lỗi phát hiện hoặc dữ liệu mới sau khi chạy lệnh -->
+                <div id="step2LinkedNewDataWrap" style="max-height:220px; overflow:auto; border:1px solid #f1ece0; border-radius:10px; background:#fffdf9;">
+                  <div style="padding:14px; font-size:12px; color:#64748b; text-align:center;">
+                    Chưa có dữ liệu. Khi nạp file hoặc chạy lệnh, hệ thống sẽ tự động liệt kê các dòng lỗi và dữ liệu mới cập nhật tại đây.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nhật ký luồng lệnh đã thực thi -->
+              <div id="step2CommandLogWrap" style="background:#fffdf7; border:1.5px dashed #e5d8b8; border-radius:12px; padding:10px 14px; max-height:175px; overflow-y:auto;">
+                <div id="step2CommandLogList" style="display:flex; flex-direction:column; gap:8px; font-size:12px; color:#64748b;">
+                  <div>Chưa có lệnh nào được thực thi. Hãy nhập yêu cầu phía trên hoặc bấm một lệnh nhanh để AI Agent chạy trực tiếp trên bảng dữ liệu.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BẢNG DỮ LIỆU THÔ TRỰC TIẾP: CHẠY DỮ LIỆU & CHỈNH SỬA KHI ĐƯỢC CẤP QUYỀN TỪ CHECKPOINT 1 -->
+            <div class="saas-card" id="rawDataEditableTableCard" style="margin-top:16px; border-left:4px solid #f37021;">
+              <div class="saas-card-title-row" style="margin-bottom:12px; flex-wrap:wrap; gap:10px;">
+                <div>
+                  <div class="saas-card-title" style="display:flex; align-items:center; gap:8px; color:#c2410c; flex-wrap:wrap;">
+                    <span>BẢNG DỮ LIỆU THÔ TRỰC TIẾP (CHẠY DỮ LIỆU BƯỚC 2)</span>
+                    <span class="badge-tag eligible" id="liveRawTableMetaBadge" style="font-size:11px;">0 dòng</span>
+                    <span class="badge-tag missing" id="liveRawEditPermBadge" style="font-size:11px;">Chỉ xem (Chọn "Không Hài Lòng" tại Checkpoint 1 để cấp quyền sửa)</span>
+                  </div>
+                  <div id="liveRawEditHintDesc" style="font-size:12px; color:#64748b; margin-top:2px;">
+                    Bảng đang ở chế độ chỉ xem để bảo toàn dữ liệu gốc. Để chỉnh sửa thủ công trực tiếp trên bảng, hãy bấm <b>Chuyển sang Bước 3</b> và chọn <b>Không Hài Lòng</b> tại <b>HUMAN CHECKPOINT 1</b>.
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                  <button type="button" class="btn-primary-action" style="font-size:11.5px; padding:6px 13px;" onclick="runAiCleanOnRawTable()">
+                    <span>Chạy AI Làm Sạch & Khử Trùng Lặp</span>
+                  </button>
+                  <button type="button" id="btnLiveRawAddRow" class="btn-secondary-tool" style="display:none; font-size:11.5px; padding:6px 12px;" onclick="addRowToLiveRawTable()">
+                    <span>+ Thêm Dòng</span>
+                  </button>
+                  <button type="button" id="btnLiveRawSave" class="btn-primary-action" style="display:none; font-size:11.5px; padding:6px 13px; background:#059669 !important;" onclick="saveLiveRawTableChanges()">
+                    <span>Lưu Chỉnh Sửa & Khóa Bảng</span>
+                  </button>
+                  <button type="button" class="btn-secondary-tool" style="font-size:11.5px; padding:6px 12px;" onclick="exportLiveRawTableCsv()">
+                    <span>Xuất Dữ Liệu Sạch (CSV)</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Thanh tìm kiếm & lọc trạng thái nhanh trên bảng dữ liệu thô -->
+              <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
+                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                  <input type="text" id="liveRawTableSearch" class="input-pastel" style="width:260px; padding:6px 12px; font-size:12px;" placeholder="Tìm kiếm nhanh trong bảng dữ liệu thô..." oninput="liveRawTablePage=1; renderLiveRawDataTable()">
+                  <select id="liveRawTableStatusFilter" class="input-pastel" style="width:190px; padding:6px 10px; font-size:12px;" onchange="liveRawTablePage=1; renderLiveRawDataTable()">
+                    <option value="all">Tất cả dòng dữ liệu</option>
+                    <option value="error">Chỉ dòng có lỗi / thiếu</option>
+                    <option value="dup">Chỉ dòng trùng lặp</option>
+                    <option value="clean">Chỉ dòng sạch (Hợp lệ)</option>
+                  </select>
+                </div>
+                <div id="liveRawTablePagination" style="display:flex; align-items:center; gap:8px; font-size:12px; color:#475569;"></div>
+              </div>
+
+              <!-- Bảng Dữ Liệu Thô Có Thể Sửa Trực Tiếp Từng Ô -->
+              <div style="overflow-x:auto; max-height:420px; border:1.5px solid #efe3c2; border-radius:14px;">
+                <table class="saas-table live-raw-editable-table" id="liveRawDataTable" style="margin:0;">
+                  <thead id="liveRawDataThead" style="position:sticky; top:0; z-index:2; background:#fff8e6;">
+                    <!-- Dynamic Headers -->
+                  </thead>
+                  <tbody id="liveRawDataTbody">
+                    <tr>
+                      <td colspan="7" style="text-align:center; padding:32px; color:#94a3b8;">
+                        Chưa có dữ liệu thô. Vui lòng hoàn thiện Bước 1 (điền Bối cảnh & tải File dữ liệu thô).
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- BẢNG THỐNG KÊ DỮ LIỆU LỖI & TỔNG TOÀN BỘ DỮ LIỆU (DATA CLEANSING & QUALITY AUDIT) -->
+            <div class="saas-card" id="cleansingAuditCard" style="margin-top:20px; border-left:4px solid #0284c7;">
+              <div class="saas-card-title-row" style="margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+                <div>
+                  <div class="saas-card-title" style="display:flex; align-items:center; gap:8px; color:#0369a1;">
+                    <span>BẢNG THỐNG KÊ DỮ LIỆU LỖI & TỔNG TOÀN BỘ DỮ LIỆU</span>
+                  </div>
+                  <div style="font-size:12px; color:#64748b; margin-top:2px;">
+                    Chi tiết phân loại dữ liệu đầu vào, phát hiện các bản ghi dị thường/lỗi và quy chuẩn làm sạch của AI Agent
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                  <button type="button" class="btn-secondary-tool" style="font-size:11.5px; padding:5px 12px; border-radius:16px;" onclick="exportCleansingAuditCsv()">
+                    <span>Xuất Báo Cáo Lỗi & Trùng Lặp (CSV)</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 5 Thẻ KPI Thống Kê Tổng Quan & Xử Lý Trùng Lặp -->
+              <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:12px; margin-bottom:14px;">
+                <div class="kpi-mini-card">
+                  <div class="kpi-mini-label">Tổng Toàn Bộ Dữ Liệu</div>
+                  <div class="kpi-mini-val" id="cleansingTotalRecords" style="color:#0284c7;">0 dòng</div>
+                  <div class="kpi-mini-sub" id="cleansingTotalSub">Chưa nạp dữ liệu</div>
+                </div>
+                <div class="kpi-mini-card" style="border-top:3px solid #f59e0b;">
+                  <div class="kpi-mini-label">Phát Hiện Trùng Lặp</div>
+                  <div class="kpi-mini-val" id="cleansingDupRecords" style="color:#d97706;">0 bản ghi</div>
+                  <div class="kpi-mini-sub" id="cleansingDupSub">Chờ quét dữ liệu</div>
+                </div>
+                <div class="kpi-mini-card" style="border-top:3px solid #ef4444;">
+                  <div class="kpi-mini-label">Lặp Hoàn Toàn (100%)</div>
+                  <div class="kpi-mini-val" id="cleansingExactDupRecords" style="color:#dc2626;">0 đã xóa</div>
+                  <div class="kpi-mini-sub" id="cleansingExactDupSub">Chờ phân tích</div>
+                </div>
+                <div class="kpi-mini-card" style="border-top:3px solid #8b5cf6;">
+                  <div class="kpi-mini-label">Lặp 1 Phần (Thẩm Định)</div>
+                  <div class="kpi-mini-val" id="cleansingPartialDupRecords" style="color:#7c3aed;">0 bản ghi</div>
+                  <div class="kpi-mini-sub" id="cleansingPartialDupSub">Chưa có dữ liệu thẩm định</div>
+                </div>
+                <div class="kpi-mini-card" style="border-top:3px solid #10b981;">
+                  <div class="kpi-mini-label">Dữ Liệu Sạch Sau Xử Lý</div>
+                  <div class="kpi-mini-val" id="cleansingCleanRecords" style="color:#16a34a;">0 dòng</div>
+                  <div class="kpi-mini-sub" id="cleansingSuccessRateSub">Tỷ lệ đạt chuẩn: 0%</div>
+                </div>
+              </div>
+
+              <!-- Thanh Quy Chuẩn Xử Lý Trùng Lặp & Bộ Lọc Nhanh -->
+              <div style="background:#fffdf0; border:1px solid #fde68a; border-radius:10px; padding:12px 16px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <span style="font-size:22px;"></span>
+                  <div>
+                    <div style="font-weight:700; color:#b45309; font-size:12.5px; display:flex; align-items:center; gap:6px;">
+                      <span>QUY CHUẨN XỬ LÝ TRÙNG LẶP CỦA AI AGENT:</span>
+                      <span class="badge-tag eligible" style="font-size:11px; padding:2px 8px;">Tự Động & Thẩm Định HITL</span>
+                    </div>
+                    <div style="font-size:12px; color:#475569; margin-top:3px; line-height:1.5;">
+                      • <b>Lặp Hoàn Toàn (100% Exact):</b> Tự động <b>XÓA BỎ</b> bản ghi dư thừa (tránh tính đúp doanh thu & sai lệch tồn kho).<br>
+                      • <b>Lặp 1 Phần (Partial):</b> AI phân tích bối cảnh: Nếu <b>HỢP LÝ</b> (đơn đặt bổ sung, chia đợt bàn giao) &rarr; <b>GIỮ LẠI & HỢP NHẤT</b>; Nếu <b>KHÔNG HỢP LÝ</b> (xung đột chiết khấu/giá, lỗi mạng gửi lặp) &rarr; <b>XÓA BỎ</b>.
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:6px;">
+                  <button type="button" class="btn-secondary-tool active" id="btnFilterAuditAll" style="font-size:11px; padding:5px 12px; border-radius:14px; font-weight:600;" onclick="filterCleansingAudit('all', this)">
+                    Tất Cả (<span id="countFilterAll">0</span>)
+                  </button>
+                  <button type="button" class="btn-secondary-tool" id="btnFilterAuditDup" style="font-size:11px; padding:5px 12px; border-radius:14px; color:#d97706; border-color:#fde68a; font-weight:600;" onclick="filterCleansingAudit('duplicate', this)">
+                    Trùng Lặp 1 Phần Giữ Lại (<span id="countFilterDup">0</span>)
+                  </button>
+                  <button type="button" class="btn-secondary-tool" id="btnFilterAuditOther" style="font-size:11px; padding:5px 12px; border-radius:14px; font-weight:600;" onclick="filterCleansingAudit('other', this)">
+                    Lỗi Định Dạng & Khác (<span id="countFilterOther">0</span>)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Thanh Công Cụ Chỉnh Sửa Trực Tiếp Trên Bảng Dữ Liệu Thô -->
+              <div id="inlineRawEditToolbar" style="display:none; background:#fff7ed; border:2px solid #f37021; border-radius:14px; padding:12px 16px; margin-bottom:14px; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+                <div>
+                  <div style="font-weight:800; color:#c2410c; font-size:13px;">
+                    CHẾ ĐỘ CHỈNH SỬA THỦ CÔNG TRỰC TIẾP TRÊN BẢNG DỮ LIỆU THÔ
+                  </div>
+                  <div style="font-size:12px; color:#7c2d12; margin-top:2px;">
+                    Bạn đang chỉnh sửa trực tiếp từng ô dữ liệu trong bảng bên dưới. Sau khi chỉnh xong, bấm <b>Lưu Chỉnh Sửa Trực Tiếp</b> rồi bấm <b>Chuyển sang Bước 3</b> để xác nhận lại.
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                  <button type="button" class="btn-secondary-tool" style="font-size:12px; padding:6px 12px;" onclick="addInlineRawRow()">
+                    <span>+ Thêm Dòng Mới</span>
+                  </button>
+                  <button type="button" class="btn-primary-action" style="font-size:12px; padding:7px 14px;" onclick="saveInlineRawTableEdits()">
+                    <span>Lưu Chỉnh Sửa Trực Tiếp</span>
+                  </button>
+                  <button type="button" class="btn-secondary-tool" style="font-size:12px; padding:6px 12px;" onclick="disableInlineRawTableEdit()">
+                    <span>Đóng Chế Độ Sửa</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bảng Thống Kê Chi Tiết Dữ Liệu Lỗi -->
+              <div style="overflow-x:auto;">
+                <table class="saas-table" id="cleansingErrorTable">
+                  <thead>
+                    <tr>
+                      <th style="width:75px;">Mã Dòng</th>
+                      <th style="width:160px;">Trường Dữ Liệu</th>
+                      <th style="width:200px;">Giá Trị Thô Ban Đầu</th>
+                      <th style="width:190px;">Loại Lỗi / Trùng Lặp</th>
+                      <th>Thẩm Định & Hành Động Của AI Agent</th>
+                      <th style="width:140px; text-align:center;">Quyết Định Xử Lý</th>
+                    </tr>
+                  </thead>
+                  <tbody id="cleansingErrorTableBody">
+                    <!-- Populated dynamically by JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- LUỒNG ĐỐI SOÁT & SỬA LỖI DỮ LIỆU (RECONCILIATION & ERROR CORRECTION WORKFLOW) -->
+            <div class="saas-card" id="reconciliationWorkflowCard" style="margin-top:20px; border-left:4px solid #f59e0b; background:#fffefb;">
+              <div class="saas-card-title-row" style="margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+                <div>
+                  <div class="saas-card-title" style="display:flex; align-items:center; gap:8px; color:#b45309;">
+                    <span>LUỒNG ĐỐI SOÁT & SỬA LỖI DỮ LIỆU (DATA RECONCILIATION & ERROR FIXING)</span>
+                    <span class="badge-tag pending" id="reconciliationStatusBadge">Đang Chờ Đối Soát & Sửa Lỗi</span>
+                  </div>
+                  <div style="font-size:12px; color:#64748b; margin-top:2px;">
+                    Quy trình đối soát chéo 3 chiều (Danh mục ERP, Hạn mức & Chính sách, Toàn vẹn & Trùng lặp) kết hợp bảng điều khiển sửa lỗi tương tác trực tiếp
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <button type="button" class="btn-primary-action" id="btnAutoFixAllErrors" style="font-size:12px; padding:6px 14px; background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%);" onclick="runAutoFixAllErrors()">
+                    <span>AI Tự Động Sửa Toàn Bộ Lỗi</span>
+                  </button>
+                  <button type="button" class="btn-secondary-tool" style="font-size:12px; padding:6px 14px;" onclick="runRecheckReconciliation()">
+                    <span>Chạy Lại Đối Soát</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 3 Trụ Cột Đối Soát Chéo 3 Chiều -->
+              <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-bottom:16px;">
+                <div class="kpi-mini-card" style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span style="font-weight:700; font-size:12.5px; color:#1e293b;">1. Đối Soát Danh Mục & Tồn Kho</span>
+                    <span class="badge-tag missing" id="reconBadgeCatalog" style="font-size:10.5px; padding:2px 8px;">Chờ Đối Soát</span>
+                  </div>
+                  <div style="font-size:11.5px; color:#94a3b8; line-height:1.5;" id="reconDescCatalog">
+                    Chưa có dữ liệu. Vui lòng hoàn thiện Bước 1 (điền Bối cảnh & tải File dữ liệu thô).
+                  </div>
+                </div>
+
+                <div class="kpi-mini-card" style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span style="font-weight:700; font-size:12.5px; color:#1e293b;">2. Đối Soát Chính Sách & Giá</span>
+                    <span class="badge-tag missing" id="reconBadgePolicy" style="font-size:10.5px; padding:2px 8px;">Chờ Đối Soát</span>
+                  </div>
+                  <div style="font-size:11.5px; color:#94a3b8; line-height:1.5;" id="reconDescPolicy">
+                    Chưa có dữ liệu. Vui lòng hoàn thiện Bước 1 (điền Bối cảnh & tải File dữ liệu thô).
+                  </div>
+                </div>
+
+                <div class="kpi-mini-card" style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span style="font-weight:700; font-size:12.5px; color:#1e293b;">3. Đối Soát Trùng Lặp & Toàn Vẹn</span>
+                    <span class="badge-tag missing" id="reconBadgeIntegrity" style="font-size:10.5px; padding:2px 8px;">Chờ Đối Soát</span>
+                  </div>
+                  <div style="font-size:11.5px; color:#94a3b8; line-height:1.5;" id="reconDescIntegrity">
+                    Chưa có dữ liệu. Vui lòng hoàn thiện Bước 1 (điền Bối cảnh & tải File dữ liệu thô).
+                  </div>
+                </div>
+              </div>
+
+              <!-- Danh Sách Các Mục Cần Sửa Lỗi Tương Tác Trực Tiếp -->
+              <div style="background:#fff; border:1px solid #fde68a; border-radius:10px; padding:14px; margin-bottom:6px;">
+                <div style="font-weight:700; font-size:12.5px; color:#b45309; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between;">
+                  <span>BẢNG ĐIỀU KHIỂN SỬA LỖI & PHÊ DUYỆT ĐIỀU CHỈNH (INTERACTIVE RESOLUTION):</span>
+                  <span style="font-size:11.5px; color:#64748b; font-weight:normal;" id="fixStatusCount">Đã sẵn sàng xử lý các mục lỗi</span>
+                </div>
+
+                <div id="reconciliationActionList" style="display:flex; flex-direction:column; gap:10px;">
+                  <!-- Dynamic Error Fixing Cards injected by JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- THANH CHUYỂN TIẾP SANG BƯỚC 3 (BẤM VÀO SẼ HIỆN POPUP HUMAN CHECKPOINT 1) -->
+            <div class="saas-card" id="step2ProceedCard" style="margin-top:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;">
+              <div>
+                <div style="font-weight:800; font-size:14.5px; color:#2B241D;">Hoàn Tất Kiểm Tra & Làm Sạch Dữ Liệu Ở Bước 2?</div>
+                <div style="font-size:12.5px; color:#64748b; margin-top:2px;">Khi bấm <b>Chuyển sang Bước 3</b>, màn hình <b>HUMAN CHECKPOINT 1</b> sẽ hiện lên để bạn xác nhận hài lòng hoặc chỉnh sửa trực tiếp trên bảng dữ liệu thô.</div>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+                <button type="button" class="btn-primary-action" onclick="openCheckpoint1Modal()">
+                  <span>Chuyển Sang Bước 3: Thẩm Định Kho & Giá &rarr;</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- HUMAN CHECKPOINT 1: ẨN INLINE KHI MỚI VÀO BƯỚC 2 (CHỈ HIỆN MODAL KHI ẤN CHUYỂN SANG BƯỚC 3) -->
+            <div class="saas-card" id="parsingHumanCheckpointCard" style="display:none !important; border-left: 4px solid #f59e0b; background: #fffdf5; margin-top:20px;">
+              <div class="saas-card-title-row" style="flex-wrap:wrap; gap:10px;">
+                <div class="saas-card-title" style="color:#b45309;">
+                  <span>HUMAN CHECKPOINT 1: XÁC NHẬN DỮ LIỆU ĐÃ LÀM SẠCH ĐẠT CHUẨN</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <button type="button" class="btn-primary-action" style="font-size:12px; padding:6px 14px; background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%);" onclick="openCheckpoint1Modal()">
+                    <span>Mở Khung Đánh Giá Checkpoint 1</span>
+                  </button>
+                  <span class="badge-tag pending" id="parsingVerificationBadge">Chờ Đánh Giá & Xác Nhận</span>
+                </div>
+              </div>
+              <div id="parsingCheckpointGuidance" style="font-size:13px; color:#475569; margin-bottom:14px; line-height:1.6;">
+                <!-- Dynamically filled by JS -->
+              </div>
+
+              <!-- KHUNG ĐIỀU KIỆN BẮT BUỘC: HÀI LÒNG VS KHÔNG HÀI LÒNG -->
+              <div style="background:#ffffff; border:1.5px solid #fde68a; border-radius:12px; padding:16px; margin-bottom:16px;">
+                <div style="font-weight:700; font-size:13px; color:#b45309; margin-bottom:6px; display:flex; align-items:center; gap:8px;">
+                  <span>ĐIỀU KIỆN BẮT BUỘC: ĐÁNH GIÁ MỨC ĐỘ HÀI LÒNG TRƯỚC KHI CHUYỂN BƯỚC 3</span>
+                  <span class="badge-tag missing" style="font-size:10.5px; padding:2px 8px; font-weight:700;">Bắt Buộc Xác Nhận</span>
+                </div>
+                <p style="font-size:12px; color:#64748b; margin-bottom:12px; line-height:1.5;">
+                  Theo quy định kiểm soát chất lượng dữ liệu B2B, bạn bắt buộc phải đánh giá kết quả làm sạch: Nếu <b>Hài lòng</b>, hệ thống sẽ phê duyệt để chuyển sang Bước 3 (Thẩm định kho & báo giá); nếu <b>Không hài lòng</b>, bạn có thể chỉnh sửa thủ công các thông tin.
+                </p>
+
+                <!-- 2 Lựa chọn -->
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+                  <!-- HÀI LÒNG -->
+                  <div id="choiceSatisfiedCard" onclick="selectParsingSatisfaction('SATISFIED')" 
+                       style="cursor:pointer; border:2px solid #e2e8f0; border-radius:10px; padding:12px 14px; background:#fafafa; transition:all 0.2s;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                      <input type="radio" name="parsingSatisfactionRadio" id="radioSatisfied" value="SATISFIED" style="width:16px; height:16px; accent-color:#10b981; cursor:pointer;" onclick="event.stopPropagation(); selectParsingSatisfaction('SATISFIED');">
+                      <label for="radioSatisfied" style="font-weight:700; font-size:13px; color:#166534; cursor:pointer;">
+                        HÀI LÒNG VỚI DỮ LIỆU SẠCH
+                      </label>
+                    </div>
+                    <div style="font-size:11.5px; color:#4b5563; padding-left:24px; line-height:1.5;">
+                      Dữ liệu bóc tách và làm sạch đã đạt chuẩn 100%. <b>Xác nhận để chuyển sang Bước 3: Thẩm định tồn kho & giá &rarr;</b>
+                    </div>
+                  </div>
+
+                  <!-- KHÔNG HÀI LÒNG -->
+                  <div id="choiceUnsatisfiedCard" onclick="selectParsingSatisfaction('UNSATISFIED')" 
+                       style="cursor:pointer; border:2px solid #e2e8f0; border-radius:10px; padding:12px 14px; background:#fafafa; transition:all 0.2s;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                      <input type="radio" name="parsingSatisfactionRadio" id="radioUnsatisfied" value="UNSATISFIED" style="width:16px; height:16px; accent-color:#f59e0b; cursor:pointer;" onclick="event.stopPropagation(); selectParsingSatisfaction('UNSATISFIED');">
+                      <label for="radioUnsatisfied" style="font-weight:700; font-size:13px; color:#9a3412; cursor:pointer;">
+                        KHÔNG HÀI LÒNG (CẦN CHỈNH SỬA)
+                      </label>
+                    </div>
+                    <div style="font-size:11.5px; color:#4b5563; padding-left:24px; line-height:1.5;">
+                      Dữ liệu còn thiếu sót hoặc chưa vừa ý. <b>Hệ thống sẽ mở form để bạn trực tiếp chỉnh sửa thủ công.</b>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="satisfactionAlertMsg" style="display:none; background:#fee2e2; border:1px solid #fca5a5; color:#991b1b; padding:8px 12px; border-radius:8px; font-size:12px; font-weight:700;">
+                  ĐIỀU KIỆN BẮT BUỘC: Bạn chưa chọn xác nhận mức độ hài lòng! Vui lòng chọn "Hài Lòng" để sang Bước 3 hoặc "Không Hài Lòng" để chỉnh sửa thủ công.
+                </div>
+              </div>
+
+              <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+                <button class="btn-primary-action" id="btnConfirmParsingAction" onclick="confirmParsingCheckpoint()">
+                  <span>Xác Nhận & Tiếp Tục Thẩm Định Kho (Nếu Hài Lòng) &rarr;</span>
+                </button>
+                <button class="btn-secondary-tool" id="btnManualEditParsingAction" onclick="openEditParsingModal()">
+                  <span>Chỉnh Sửa Dữ Liệu Thủ Công</span>
+                </button>
+                <button class="btn-secondary-tool" id="btnRequestMoreInfoAction" style="color:#d97706; border-color:#fde68a;" onclick="openRequestMoreInfoModal()">
+                  <span>Yêu Cầu Khách Hàng Bổ Sung</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 6: QUẢN LÝ CƠ HỘI BÁN HÀNG
+               ------------------------------------------------------------- -->
+          <div id="page-opportunities" class="saas-page">
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Quản Lý Toàn Bộ Cơ Hội Bán Hàng B2B</h1>
+                <p class="page-main-sub">Danh sách chi tiết, bộ lọc đa chiều và thao tác xem hồ sơ</p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <select id="oppStatusFilter" class="form-input" style="width:180px; padding:6px 10px;" onchange="filterOpportunitiesTable()">
+                  <option value="ALL">Tất cả trạng thái</option>
+                  <option value="Có thể tiếp tục">Có thể tiếp tục</option>
+                  <option value="Chờ duyệt">Chờ duyệt</option>
+                  <option value="Cần bổ sung thông tin">Cần bổ sung thông tin</option>
+                  <option value="Chưa đáp ứng">Chưa đáp ứng</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="saas-card">
+              <table class="saas-table">
+                <thead>
+                  <tr>
+                    <th>Mã Cơ Hội</th>
+                    <th>Khách Hàng</th>
+                    <th>Người Liên Hệ</th>
+                    <th>Ngày Tiếp Nhận</th>
+                    <th>Tổng Giá Trị</th>
+                    <th>Sales Phụ Trách</th>
+                    <th>Trạng Thái</th>
+                    <th>Hành Động</th>
+                  </tr>
+                </thead>
+                <tbody id="allOppsTableBody">
+                  <!-- Injected via JS -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Opportunity Detail Modal / Box -->
+            <div class="saas-card" id="oppDetailViewerBox" style="display:none; border-top:3px solid #f59e0b;">
+              <div class="saas-card-title-row">
+                <div class="saas-card-title">
+                  <span>Chi Tiết Hồ Sơ Cơ Hội: <b id="detailViewerId">OPP-2026-001</b></span>
+                </div>
+                <button class="btn-secondary-tool" onclick="document.getElementById('oppDetailViewerBox').style.display='none'">Đóng ✕</button>
+              </div>
+
+              <div id="detailViewerContent">
+                <!-- Injected full detail -->
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 7: THẨM ĐỊNH SẢN PHẨM VÀ TỒN KHO
+               ------------------------------------------------------------- -->
+          <div id="page-validation" class="saas-page">
+            <!-- Stepper Quy Trình Có Sự Giám Sát Của Con Người -->
+            <div class="human-checkpoint-stepper">
+              <div class="step-item done" onclick="openSaasPage('page-ingestion')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">1. Tiếp Nhận</div>
+                  <div class="step-sub">Nạp văn bản/file</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item done" onclick="openSaasPage('page-parsing')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">2. Bóc Tách Thực Thể</div>
+                  <div class="step-sub">Đã xác nhận bóc tách</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item active">
+                <div class="step-circle">3</div>
+                <div class="step-text">
+                  <div class="step-title">3. Thẩm Định Kho</div>
+                  <div class="step-sub">Checkpoint 1.2: Đối chiếu tồn</div>
+                </div>
+              </div>
+              <div class="step-connector"></div>
+              <div class="step-item">
+                <div class="step-circle">4</div>
+                <div class="step-text">
+                  <div class="step-title">4. Tính Giá & Chiết Khấu</div>
+                  <div class="step-sub">Kiểm soát hạn mức duyệt</div>
+                </div>
+              </div>
+              <div class="step-connector"></div>
+              <div class="step-item">
+                <div class="step-circle">5</div>
+                <div class="step-text">
+                  <div class="step-title">5. Phê Duyệt Cấp Trên</div>
+                  <div class="step-sub">Checkpoint 2: Quản lý chốt</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Thẩm Định Danh Mục Sản Phẩm & Tồn Kho (Skill 2)</h1>
+                <p class="page-main-sub">Đối chiếu dữ liệu thời gian thực với Danh mục sản phẩm Master Catalog Doanh nghiệp</p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <button class="btn-secondary-tool" onclick="runLiveInventoryValidation()">
+                  <span>Chạy thẩm định AI</span>
+                </button>
+                <button class="btn-primary-action" onclick="openSaasPage('page-pricing')">
+                  <span>Chuyển sang Báo giá &rarr;</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- HUMAN CHECKPOINT 1.2: THẨM ĐỊNH TỒN KHO CỦA CƠ HỘI ĐANG XỬ LÝ -->
+            <div class="saas-card" id="activeOppValidationBox" style="border-left: 4px solid #059669; background: #f0fdf4;">
+              <div class="saas-card-title-row">
+                <div class="saas-card-title" style="color:#047857;">
+                  <span>HUMAN CHECKPOINT 1.2: THẨM ĐỊNH TỒN KHO CỦA CƠ HỘI <code id="valOppId">CHỜ NẠP ĐƠN</code></span>
+                </div>
+                <span class="badge-tag missing" id="valStockMatchBadge">Chưa Có Dữ Liệu</span>
+              </div>
+              <div id="valOppItemsTableWrap">
+                <div style="text-align:center; padding:36px 16px; color:#64748b; background:#f8fafc; border-radius:12px; border:1px dashed #cbd5e1;">
+                  <div style="font-size:14px; font-weight:700; color:#1e293b; margin-top:8px;">Chưa Có Dữ Liệu Thẩm Định Tồn Kho</div>
+                  <p style="font-size:12.5px; margin-top:4px;">Vui lòng hoàn thiện <b>Bước 1</b> (điền Bối cảnh & tải File dữ liệu thô) và xác nhận <b>Bước 2</b> trước.</p>
+                </div>
+              </div>
+              <div id="valActionFooter" style="margin-top:16px; display:none; justify-content:space-between; align-items:center; border-top:1px dashed #bbf7d0; padding-top:14px; flex-wrap:wrap; gap:12px;">
+                <div style="font-size:12.5px; color:#065f46;">
+                  Đã đối chiếu với kho thực tế. Vui lòng kiểm tra và <b>Xác nhận chấp thuận giữ kho</b> cho khách hàng.
+                </div>
+                <div style="display:flex; gap:10px;">
+                  <button class="btn-primary-action" style="background:#059669;" onclick="confirmInventoryAndProceed()">
+                    <span>Xác Nhận Đủ Kho & Tiếp Tục Lập Báo Giá &rarr;</span>
+                  </button>
+                  <button class="btn-secondary-tool" style="color:#dc2626; border-color:#fca5a5;" onclick="markInventoryUnfulfilled()">
+                    <span>✕ Đánh Dấu Chưa Đáp Ứng (Hết Hàng)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- LUỒNG 1 & 2 BƯỚC 3: PLAN & KPI + PHÂN TÍCH INSIGHT -->
+            <div class="step3-dual-flow-grid" id="step3PlanInsightGrid">
+              <!-- LUỒNG 1: PLAN & KPI -->
+              <div class="saas-card step3-flow-card step3-plan-card" id="step3PlanKpiCard">
+                <div class="saas-card-title-row" style="margin-bottom:12px; flex-wrap:wrap; gap:10px;">
+                  <div>
+                    <div class="saas-card-title step3-plan-title" style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                      <span>LUỒNG PLAN &amp; KPI CHIẾN LƯỢC (BƯỚC 3)</span>
+                      <span class="badge-tag pending" id="step3PlanKpiBadge">Chờ Dữ Liệu</span>
+                    </div>
+                    <div class="step3-flow-sub">Kế hoạch triển khai &amp; bộ chỉ tiêu KPI đo lường bám sát bối cảnh Bước 1 và đầu ra Bước 2</div>
+                  </div>
+                  <button type="button" class="btn-secondary-tool" style="font-size:11.5px; padding:5px 12px;" onclick="refreshStep3PlanKpi()">
+                    <span>Làm Mới Plan &amp; KPI</span>
+                  </button>
+                </div>
+                <div id="step3PlanKpiBody">
+                  <div class="step3-empty-box">
+                    <div class="step3-empty-title">Chưa Có Dữ Liệu Plan &amp; KPI</div>
+                    <p class="step3-empty-desc">Vui lòng hoàn thiện <b>Bước 1</b> (điền Bối cảnh &amp; tải File dữ liệu thô) và xác nhận <b>Bước 2</b> để hệ thống lập kế hoạch và tính KPI.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LUỒNG 2: PHÂN TÍCH INSIGHT -->
+              <div class="saas-card step3-flow-card step3-insight-card" id="step3InsightCard">
+                <div class="saas-card-title-row" style="margin-bottom:12px; flex-wrap:wrap; gap:10px;">
+                  <div>
+                    <div class="saas-card-title step3-insight-title" style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                      <span>LUỒNG PHÂN TÍCH INSIGHT DỮ LIỆU (BƯỚC 3)</span>
+                      <span class="badge-tag pending" id="step3InsightBadge">Chờ Dữ Liệu</span>
+                    </div>
+                    <div class="step3-flow-sub">Phân tích đa chiều từ 100% dữ liệu sạch Bước 2: Pareto mặt hàng, tồn kho, kênh/khu vực &amp; khuyến nghị AI</div>
+                  </div>
+                  <button type="button" class="btn-secondary-tool" style="font-size:11.5px; padding:5px 12px;" onclick="refreshStep3Insight()">
+                    <span>Phân Tích Lại Insight</span>
+                  </button>
+                </div>
+                <div id="step3InsightBody">
+                  <div class="step3-empty-box">
+                    <div class="step3-empty-title">Chưa Có Dữ Liệu Phân Tích Insight</div>
+                    <p class="step3-empty-desc">Vui lòng hoàn thiện <b>Bước 1</b> và xác nhận <b>Bước 2</b> để AI Agent rút trích insight thực tế từ tệp dữ liệu.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="saas-card">
+              <div class="saas-card-title-row">
+                <div class="saas-card-title">Master Catalog & Năng Lực Đáp Ứng Toàn Doanh Nghiệp</div>
+              </div>
+              <table class="saas-table">
+                <thead>
+                  <tr>
+                    <th>Mã SKU</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Danh Mục</th>
+                    <th>Đơn Giá Niêm Yết</th>
+                    <th>Tồn Khả Dụng</th>
+                    <th>Lead-time Tiêu Chuẩn</th>
+                    <th>Lead-time Hỏa Tốc</th>
+                    <th>Bảo Hành</th>
+                  </tr>
+                </thead>
+                <tbody id="catalogTableBody">
+                  <!-- Injected from catalog -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 8: BÁO GIÁ VÀ CHIẾT KHẤU
+               ------------------------------------------------------------- -->
+          <div id="page-pricing" class="saas-page">
+            <!-- Stepper Quy Trình Có Sự Giám Sát Của Con Người -->
+            <div class="human-checkpoint-stepper">
+              <div class="step-item done" onclick="openSaasPage('page-ingestion')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">1. Tiếp Nhận</div>
+                  <div class="step-sub">Nạp văn bản/file</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item done" onclick="openSaasPage('page-parsing')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">2. Bóc Tách Thực Thể</div>
+                  <div class="step-sub">Đã xác nhận bóc tách</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item done" onclick="openSaasPage('page-validation')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">3. Thẩm Định Kho</div>
+                  <div class="step-sub">Đã đối chiếu kho</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item active">
+                <div class="step-circle">4</div>
+                <div class="step-text">
+                  <div class="step-title">4. Tính Giá & Chiết Khấu</div>
+                  <div class="step-sub">Checkpoint 1.3: Kiểm soát hạn mức</div>
+                </div>
+              </div>
+              <div class="step-connector"></div>
+              <div class="step-item">
+                <div class="step-circle">5</div>
+                <div class="step-text">
+                  <div class="step-title">5. Phê Duyệt Cấp Trên</div>
+                  <div class="step-sub">Checkpoint 2: Quản lý chốt</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Báo Giá & Ma Trận Phê Duyệt Chiết Khấu (Skill 3)</h1>
+                <p class="page-main-sub">Tính toán có kiểm soát số liệu, không để LLM tự ước lượng</p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <button class="btn-secondary-tool" onclick="openSaasPage('page-validation')">&larr; Xem lại tồn kho</button>
+                <button class="btn-primary-action" onclick="openSaasPage('page-approval')">Xem Hộp Thư Phê Duyệt &rarr;</button>
+              </div>
+            </div>
+
+            <!-- HUMAN CHECKPOINT 1.3: BẢNG TÍNH BÁO GIÁ & PHÂN QUYỀN CHIẾT KHẤU -->
+            <div class="saas-card" id="activeOppPricingBox" style="border-left: 4px solid #7c3aed; background: #faf5ff;">
+              <div class="saas-card-title-row">
+                <div class="saas-card-title" style="color:#6d28d9;">
+                  <span>HUMAN CHECKPOINT 1.3: THIẾT LẬP BÁO GIÁ & PHÂN QUYỀN CHIẾT KHẤU CHO <code id="pricingOppId">CHỜ NẠP ĐƠN</code></span>
+                </div>
+                <span class="badge-tag missing" id="pricingGovernanceBadge">Chưa Có Dữ Liệu</span>
+              </div>
+
+              <!-- Interactive 3-box pricing -->
+              <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-bottom:16px;">
+                <div style="background:#fff; padding:16px; border-radius:12px; border:1px solid #e2e8f0;">
+                  <div style="font-size:11.5px; color:#64748b; font-weight:700;">TỔNG TIỀN NIÊM YẾT (GỐC)</div>
+                  <div id="pricingOriginalTotal" style="font-size:22px; font-weight:800; color:#1e293b; margin-top:4px;">0 đ</div>
+                  <small style="color:#64748b; font-size:11px;" id="pricingItemCountNote">0 sản phẩm</small>
+                </div>
+                <div style="background:#fff; padding:16px; border-radius:12px; border:1px solid #e2e8f0;">
+                  <div style="font-size:11.5px; color:#64748b; font-weight:700;">MỨC CHIẾT KHẤU ĐỀ XUẤT (%)</div>
+                  <div style="display:flex; align-items:center; gap:8px; margin-top:4px;">
+                    <input type="number" id="pricingDiscountInput" min="0" max="30" step="0.5" value="5" class="form-input" style="width:90px; padding:6px 10px; font-size:16px; font-weight:700;" oninput="updateLivePricingCalculation()">
+                    <span style="font-weight:700; font-size:16px;">%</span>
+                    <div style="display:flex; gap:4px; margin-left:auto;">
+                      <button class="btn-secondary-tool" style="padding:4px 8px; font-size:11px;" onclick="setDiscountQuick(5)">5%</button>
+                      <button class="btn-secondary-tool" style="padding:4px 8px; font-size:11px;" onclick="setDiscountQuick(8)">8%</button>
+                      <button class="btn-secondary-tool" style="padding:4px 8px; font-size:11px;" onclick="setDiscountQuick(12)">12%</button>
+                    </div>
+                  </div>
+                  <small id="pricingDiscountValText" style="color:#dc2626; font-size:11.5px; font-weight:600; display:block; margin-top:4px;">Giảm: 0 đ</small>
+                </div>
+                <div style="background:#fff; padding:16px; border-radius:12px; border:1px solid #e2e8f0;">
+                  <div style="font-size:11.5px; color:#64748b; font-weight:700;">THÀNH TIỀN SAU CHIẾT KHẤU</div>
+                  <div id="pricingFinalTotal" style="font-size:22px; font-weight:800; color:#b45309; margin-top:4px;">0 đ</div>
+                  <small style="color:#059669; font-size:11px; font-weight:600;">(Đã bao gồm VAT & CSBH tiêu chuẩn)</small>
+                </div>
+              </div>
+
+              <div id="pricingGovernanceNotice" style="padding:14px 18px; border-radius:12px; margin-bottom:16px; font-size:13px; line-height:1.6;">
+                <!-- Dynamic notice according to role and discount -->
+              </div>
+
+              <div id="pricingActionFooter" style="display:none; justify-content:flex-end; gap:12px; border-top:1px dashed #e9d5ff; padding-top:14px;">
+                <button class="btn-primary-action glow-action-btn" id="btnConfirmPricingAction" onclick="submitPricingConfirmation()">
+                  <span>Xác Nhận Báo Giá &rarr; Tự Động Chuyển Sang Bước 5: Phê Duyệt &rarr;</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="saas-card">
+              <div class="saas-card-title-row">
+                <div class="saas-card-title">Ma Trận Thẩm Quyền Phê Duyệt Chiết Khấu Toàn Doanh Nghiệp</div>
+              </div>
+              <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+                <div style="padding:16px; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:12px;">
+                  <div style="font-size:12px; color:#065f46; font-weight:700;">HẠN MỨC CHUYÊN VIÊN SALES</div>
+                  <div style="font-size:22px; font-weight:800; color:#047857; margin-top:4px;">Chiết khấu &le; 5.0% (hoặc &le; 8.0%)</div>
+                  <div style="font-size:12px; color:#065f46; margin-top:6px;">Chuyên viên bán hàng được toàn quyền áp dụng và phát hành báo giá.</div>
+                </div>
+
+                <div style="padding:16px; background:#f5f3ff; border:1px solid #ddd6fe; border-radius:12px;">
+                  <div style="font-size:12px; color:#5b21b6; font-weight:700;">HẠN MỨC TRƯỞNG PHÒNG KD</div>
+                  <div style="font-size:22px; font-weight:800; color:#6d28d9; margin-top:4px;">Chiết khấu > 8.0% - 15.0%</div>
+                  <div style="font-size:12px; color:#5b21b6; margin-top:6px;">Hoặc tổng giá trị hợp đồng &ge; 500,000,000 VNĐ bắt buộc lập Phiếu chuyển duyệt.</div>
+                </div>
+
+                <div style="padding:16px; background:#fff1f2; border:1px solid #fecdd3; border-radius:12px;">
+                  <div style="font-size:12px; color:#9f1239; font-weight:700;">HẠN MỨC BAN GIÁM ĐỐC</div>
+                  <div style="font-size:22px; font-weight:800; color:#be123c; margin-top:4px;">Chiết khấu &gt; 15.0%</div>
+                  <div style="font-size:12px; color:#9f1239; margin-top:6px;">Các trường hợp đặc quyền ngoại lệ hoặc điều khoản thanh toán chậm.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 9: PHÊ DUYỆT (TRƯỞNG PHÒNG KINH DOANH)
+               ------------------------------------------------------------- -->
+          <div id="page-approval" class="saas-page">
+            <!-- Stepper Quy Trình Có Sự Giám Sát Của Con Người -->
+            <div class="human-checkpoint-stepper">
+              <div class="step-item done" onclick="openSaasPage('page-ingestion')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">1. Tiếp Nhận</div>
+                  <div class="step-sub">Nạp văn bản/file</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item done" onclick="openSaasPage('page-parsing')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">2. Bóc Tách Thực Thể</div>
+                  <div class="step-sub">Đã xác nhận bóc tách</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item done" onclick="openSaasPage('page-validation')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">3. Thẩm Định Kho</div>
+                  <div class="step-sub">Đã đối chiếu kho</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item done" onclick="openSaasPage('page-pricing')">
+                <div class="step-circle"></div>
+                <div class="step-text">
+                  <div class="step-title">4. Tính Giá & Chiết Khấu</div>
+                  <div class="step-sub">Đã trình duyệt</div>
+                </div>
+              </div>
+              <div class="step-connector done"></div>
+              <div class="step-item active">
+                <div class="step-circle">5</div>
+                <div class="step-text">
+                  <div class="step-title">5. Phê Duyệt Cấp Trên</div>
+                  <div class="step-sub">Checkpoint 2: Quản lý chốt</div>
+                </div>
+              </div>
+            </div>
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Hộp Thư Phê Duyệt Của Trưởng Phòng Kinh Doanh</h1>
+                <p class="page-main-sub">Human Checkpoint 2: Xem xét các trường hợp vượt thẩm quyền</p>
+              </div>
+            </div>
+
+            <div id="approvalPendingContainer">
+              <!-- Pending tickets injected -->
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 10: BÁO CÁO VÀ THỐNG KÊ
+               ------------------------------------------------------------- -->
+          <div id="page-reports" class="saas-page">
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Báo Cáo & Thống Kê Tổng Hợp Cơ Hội</h1>
+                <p class="page-main-sub">Đảm bảo nguyên tắc tính riêng giá trị và xuất văn bản chuẩn doanh nghiệp</p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <button class="btn-primary-action" onclick="exportWordReport()">
+                  <span>Xuất Báo Cáo Word (.doc)</span>
+                </button>
+                <button class="btn-secondary-tool" onclick="exportCsvReport()">
+                  <span>Xuất Excel (.csv)</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="saas-card">
+              <div class="saas-card-title-row">
+                <div class="saas-card-title">Bảng Tổng Hợp Chỉ Tiêu Pipeline B2B Doanh Nghiệp</div>
+              </div>
+              <table class="saas-table">
+                <thead>
+                  <tr>
+                    <th>Chỉ Tiêu Trạng Thái</th>
+                    <th>Ý Nghĩa Nghiệp Vụ</th>
+                    <th>Số Lượng Cơ Hội</th>
+                    <th>Tỷ Lệ (%)</th>
+                    <th>Tổng Giá Trị Tính Toán</th>
+                  </tr>
+                </thead>
+                <tbody id="reportStatsTableBody">
+                  <!-- Rows injected -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 11: NHẬT KÝ AI AGENT (AUDIT LOG)
+               ------------------------------------------------------------- -->
+          <div id="page-audit" class="saas-page">
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Nhật Ký Thực Thi AI Agent (Audit Trail)</h1>
+                <p class="page-main-sub">Minh bạch 100% · Lưu vết toàn bộ tool call, quy tắc và can thiệp của con người</p>
+              </div>
+            </div>
+
+            <div class="saas-card">
+              <table class="saas-table">
+                <thead>
+                  <tr>
+                    <th>Thời Gian</th>
+                    <th>Mã Cơ Hội</th>
+                    <th>Bước Quy Trình</th>
+                    <th>Agent / Skill</th>
+                    <th>Thao Tác Thực Thi</th>
+                    <th>Quy Tắc Áp Dụng</th>
+                    <th>Con Người Can Thiệp</th>
+                  </tr>
+                </thead>
+                <tbody id="auditLogPageTbody">
+                  <!-- Audit logs -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 14: HỒ SƠ TÀI KHOẢN CÁ NHÂN (USER PROFILE)
+               ------------------------------------------------------------- -->
+          <div id="page-profile" class="saas-page">
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Hồ Sơ Cá Nhân & Quản Trị Tài Khoản</h1>
+                <p class="page-main-sub">Quản lý thông tin định danh, bảo mật mật khẩu và phân quyền người dùng</p>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 340px 1fr; gap:24px;">
+              <!-- Profile Card -->
+              <div class="saas-card" style="text-align:center;">
+                <div style="position:relative; width:110px; height:110px; margin:0 auto 16px auto; border-radius:50%; padding:3px; background:linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);">
+                  <img src="/assets/avatar.png?v=2" id="profileCardAvatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover; background:#fff;" alt="Avatar">
+                </div>
+                <h2 style="font-size:18px; font-weight:800; color:#1e293b;" id="profileCardName">Lê Yến Như</h2>
+                <div style="font-size:13px; color:#64748b;" id="profileCardEmail">admin@minhan.com.vn</div>
+                <div style="margin-top:8px;">
+                  <span class="badge-tag eligible" id="profileCardRole">Quản trị viên (Admin)</span>
+                </div>
+
+                <div style="margin-top:20px; padding-top:16px; border-top:1px dashed #e2e8f0; text-align:left; font-size:12.5px; line-height:1.8;">
+                  <div><b>Mã định danh:</b> <code id="profileCardId">USR-001</code></div>
+                  <div><b>Công ty / Đơn vị:</b> <span id="profileCardCompany">Doanh Nghiệp B2B</span></div>
+                  <div><b>Số điện thoại:</b> <span id="profileCardPhone">0901234567</span></div>
+                  <div><b>Trạng thái:</b> <span style="color:#10b981; font-weight:700;">● Đang hoạt động</span></div>
+                </div>
+              </div>
+
+              <!-- Settings & Password Tabs -->
+              <div>
+                <!-- Update Info Card -->
+                <div class="saas-card">
+                  <div class="saas-card-title-row">
+                    <div class="saas-card-title">Cập Nhật Thông Tin Cá Nhân</div>
+                  </div>
+                  <form id="updateProfileForm" onsubmit="handleUpdateProfile(event)">
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px;">
+                      <div>
+                        <label class="form-label">Họ và tên</label>
+                        <input type="text" id="profInputName" class="form-input" required>
+                      </div>
+                      <div>
+                        <label class="form-label">Số điện thoại</label>
+                        <input type="text" id="profInputPhone" class="form-input">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Tên công ty / Phòng ban</label>
+                      <input type="text" id="profInputCompany" class="form-input">
+                    </div>
+                    <div style="display:flex; justify-content:flex-end;">
+                      <button type="submit" class="btn-primary-action">
+                        <span>Lưu Thay Đổi Thông Tin</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Change Password Card -->
+                <div class="saas-card">
+                  <div class="saas-card-title-row">
+                    <div class="saas-card-title">Đổi Mật Khẩu Đăng Nhập</div>
+                  </div>
+                  <form id="changePasswordForm" onsubmit="handleChangePassword(event)">
+                    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:14px;">
+                      <div>
+                        <label class="form-label">Mật khẩu hiện tại</label>
+                        <input type="password" id="pwdCurrent" class="form-input" required>
+                      </div>
+                      <div>
+                        <label class="form-label">Mật khẩu mới</label>
+                        <input type="password" id="pwdNew" class="form-input" required minlength="6">
+                      </div>
+                      <div>
+                        <label class="form-label">Nhập lại mật khẩu mới</label>
+                        <input type="password" id="pwdConfirm" class="form-input" required minlength="6">
+                      </div>
+                    </div>
+                    <div style="display:flex; justify-content:flex-end;">
+                      <button type="submit" class="btn-secondary-tool" style="background:#b45309; color:#fff; border-color:#b45309;">
+                        <span>Cập Nhật Mật Khẩu Mới</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 12: QUẢN LÝ DỮ LIỆU
+               ------------------------------------------------------------- -->
+          <div id="page-data" class="saas-page">
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Quản Lý & Nạp Bộ Dữ Liệu Mới</h1>
+                <p class="page-main-sub">Cho phép nạp bộ dữ liệu mới từ giảng viên mà không cần chỉnh sửa code hệ thống</p>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+              <div class="saas-card">
+                <div class="saas-card-title-row">
+                  <div class="saas-card-title">Các Tệp Dữ Liệu Hiện Hành</div>
+                </div>
+                <table class="saas-table">
+                  <thead>
+                    <tr>
+                      <th>Tên Bộ Dữ Liệu</th>
+                      <th>Loại</th>
+                      <th>Số Dòng</th>
+                      <th>Phiên Bản</th>
+                      <th>Trạng Thái</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><b>master_catalog.json</b></td>
+                      <td>Danh mục sản phẩm & tồn kho</td>
+                      <td>8 SKU</td>
+                      <td>v2026.1</td>
+                      <td><span class="badge-tag eligible">Hoạt động</span></td>
+                    </tr>
+                    <tr>
+                      <td><b>pricing_policy.json</b></td>
+                      <td>Chính sách chiết khấu</td>
+                      <td>3 Cấp</td>
+                      <td>v2026.1</td>
+                      <td><span class="badge-tag eligible">Hoạt động</span></td>
+                    </tr>
+                    <tr>
+                      <td><b>sales_team.json</b></td>
+                      <td>Nhân sự kinh doanh B2B</td>
+                      <td>6 Nhân viên</td>
+                      <td>v2026.1</td>
+                      <td><span class="badge-tag eligible">Hoạt động</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="saas-card">
+                <div class="saas-card-title-row">
+                  <div class="saas-card-title">Nạp Dữ Liệu Sản Phẩm / Quy Tắc Mới (JSON)</div>
+                </div>
+                <textarea id="newDataTextarea" class="form-input" style="height:140px; font-family:monospace; font-size:12px;" placeholder='[{"sku": "PRD-NEW-001", "name": "Thiết bị mới", "unit_price": 10000000, "stock_available": 50, "standard_lead_days": 3, "aliases": ["new prd"]}]'></textarea>
+                <div style="margin-top:12px; display:flex; justify-content:flex-end;">
+                  <button class="btn-primary-action" onclick="handleUploadNewData()">
+                    <span>Nạp Dữ Liệu Vào Hệ Thống</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------
+               PAGE 13: CÀI ĐẶT & PHÂN QUYỀN
+               ------------------------------------------------------------- -->
+          <div id="page-settings" class="saas-page">
+            <div class="page-top-bar">
+              <div>
+                <h1 class="page-main-title">Cài Đặt Hệ Thống & Phân Quyền Vai Trò</h1>
+                <p class="page-main-sub">Kiểm soát quyền truy cập thực tế theo từng cấp bậc doanh nghiệp</p>
+              </div>
+            </div>
+
+            <div class="saas-card">
+              <div class="saas-card-title-row">
+                <div class="saas-card-title">Ma Trận Phân Quyền Người Dùng (RBAC)</div>
+              </div>
+              <table class="saas-table">
+                <thead>
+                  <tr>
+                    <th>Vai Trò</th>
+                    <th>Tiếp Nhận & Bóc Tách</th>
+                    <th>Xem Hồ Sơ Phụ Trách</th>
+                    <th>Xem Toàn Bộ Hồ Sơ</th>
+                    <th>Phê Duyệt Chiết Khấu</th>
+                    <th>Quản Trị Hệ Thống</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Chuyên viên Kinh doanh (Sales)</b></td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                  </tr>
+                  <tr>
+                    <td><b>Trưởng phòng Kinh doanh</b></td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td>✕</td>
+                  </tr>
+                  <tr>
+                    <td><b>Quản trị viên (Admin - Lê Yến Như)</b></td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                    <td style="color:#16a34a; font-weight:700;">Có</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       HUMAN-IN-THE-LOOP (HITL) CONFIRMATION MODALS
+       ========================================================================= -->
+  <!-- 0. Dedicated Checkpoint 1 Modal (Popup On Screen) -->
+  <div class="hitl-modal-overlay" id="hitlCheckpoint1Modal">
+    <div class="hitl-modal-box" style="max-width:660px; border-top:4px solid #f59e0b;">
+      <div class="hitl-modal-header" style="background:#fffdf5; border-bottom:1px solid #fde68a;">
+        <h3 style="color:#b45309; display:flex; align-items:center; gap:8px;">
+          <span>HUMAN CHECKPOINT 1: XÁC NHẬN DỮ LIỆU ĐÃ LÀM SẠCH ĐẠT CHUẨN</span>
+        </h3>
+        <button class="btn-sidebar-logout" onclick="closeHitlModal('hitlCheckpoint1Modal')" style="font-size:18px;">✕</button>
+      </div>
+      <div class="hitl-modal-body" style="padding:20px;">
+        <!-- Tóm tắt kết quả xử lý dữ liệu -->
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; margin-bottom:16px;">
+          <div style="font-weight:700; font-size:13px; color:#1e293b; margin-bottom:8px;" id="modalReconSummaryTitle">
+            Tóm tắt đối soát dữ liệu cơ hội bán hàng:
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; font-size:12px;">
+            <div style="background:#fff; padding:8px 10px; border-radius:8px; border:1px solid #e2e8f0;">
+              <span style="color:#64748b;">Tổng dữ liệu:</span>
+              <div style="font-weight:700; color:#0284c7; font-size:13px;" id="modalReconTotalRows">0 dòng</div>
+            </div>
+            <div style="background:#fff; padding:8px 10px; border-radius:8px; border:1px solid #e2e8f0;">
+              <span style="color:#64748b;">Dữ liệu sạch:</span>
+              <div style="font-weight:700; color:#16a34a; font-size:13px;" id="modalReconCleanRows">0 dòng (0%)</div>
+            </div>
+            <div style="background:#fff; padding:8px 10px; border-radius:8px; border:1px solid #e2e8f0;">
+              <span style="color:#64748b;">Xử lý trùng lặp:</span>
+              <div style="font-weight:700; color:#d97706; font-size:13px;" id="modalReconDupRows">0 đã xóa | 0 giữ | 0 lỗi ô</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:12.5px; color:#334155; margin-bottom:14px; line-height:1.6;">
+          AI Agent đã hoàn tất bóc tách thực thể, làm sạch dữ liệu và đối soát chính sách. 
+          Theo quy trình kiểm soát nghiệp vụ B2B, <b>bạn bắt buộc phải chọn xác nhận một trong hai trạng thái dưới đây</b>:
+        </div>
+
+        <!-- Hai lựa chọn Hài Lòng vs Không Hài Lòng (Modal Version) -->
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:16px;">
+          <!-- Lựa chọn 1: Hài lòng -->
+          <div id="modalChoiceSatisfied" onclick="selectParsingSatisfactionModal('SATISFIED')"
+               style="cursor:pointer; border:2px solid #e2e8f0; border-radius:12px; padding:14px 16px; background:#fafafa; transition:all 0.2s;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <input type="radio" name="modalSatisfactionRadio" id="modalRadioSatisfied" value="SATISFIED" style="width:18px; height:18px; accent-color:#10b981; cursor:pointer;" onclick="event.stopPropagation(); selectParsingSatisfactionModal('SATISFIED');">
+                <label for="modalRadioSatisfied" style="font-weight:700; font-size:14px; color:#166534; cursor:pointer;">
+                  HÀI LÒNG VỚI DỮ LIỆU ĐÃ LÀM SẠCH
+                </label>
+              </div>
+              <span class="badge-tag eligible" style="font-size:11px;">Phê duyệt &rarr; Bước 3</span>
+            </div>
+            <div style="font-size:12px; color:#475569; padding-left:28px; line-height:1.5;">
+              Dữ liệu đã đạt chuẩn 100%, không còn nghi vấn hoặc thiếu sót. 
+              <b>Hệ thống sẽ phê duyệt và chuyển thẳng sang Bước 3: Thẩm định tồn kho & giá.</b>
+            </div>
+          </div>
+
+          <!-- Lựa chọn 2: Không hài lòng -->
+          <div id="modalChoiceUnsatisfied" onclick="selectParsingSatisfactionModal('UNSATISFIED')"
+               style="cursor:pointer; border:2px solid #e2e8f0; border-radius:12px; padding:14px 16px; background:#fafafa; transition:all 0.2s;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <input type="radio" name="modalSatisfactionRadio" id="modalRadioUnsatisfied" value="UNSATISFIED" style="width:18px; height:18px; accent-color:#f59e0b; cursor:pointer;" onclick="event.stopPropagation(); selectParsingSatisfactionModal('UNSATISFIED');">
+                <label for="modalRadioUnsatisfied" style="font-weight:700; font-size:14px; color:#9a3412; cursor:pointer;">
+                  KHÔNG HÀI LÒNG (CHỈNH SỬA TRỰC TIẾP TRÊN BẢNG DỮ LIỆU THÔ)
+                </label>
+              </div>
+              <span class="badge-tag missing" style="font-size:11px;">Cấp quyền sửa trực tiếp</span>
+            </div>
+            <div style="font-size:12px; color:#475569; padding-left:28px; line-height:1.5;">
+              Dữ liệu còn thiếu trường, sai lệch số lượng hoặc cần điều chỉnh thêm. 
+              <b>Hệ thống sẽ cấp quyền và mở khóa chỉnh sửa trực tiếp ngay trên từng ô của Bảng Dữ Liệu Thô.</b>
+            </div>
+          </div>
+        </div>
+
+        <div id="modalSatisfactionAlert" style="display:none; background:#fee2e2; border:1px solid #fca5a5; color:#991b1b; padding:10px 14px; border-radius:8px; font-size:12px; font-weight:700; margin-bottom:12px;">
+          ĐIỀU KIỆN BẮT BUỘC: Bạn phải chọn "Hài Lòng" hoặc "Không Hài Lòng" trước khi xác nhận!
+        </div>
+      </div>
+      <div class="hitl-modal-footer" style="background:#f8fafc; border-top:1px solid #e2e8f0; justify-content:space-between;">
+        <button class="btn-secondary-tool" onclick="closeHitlModal('hitlCheckpoint1Modal')">
+          Đóng & Xem Lại Bảng Đối Soát
+        </button>
+        <button class="btn-primary-action" id="modalConfirmCheckpointBtn" onclick="submitModalCheckpoint1()" style="min-width:260px;">
+          <span>Xác Nhận Lựa Chọn & Tiếp Tục &rarr;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Universal Confirmation Modal -->
+  <div class="hitl-modal-overlay" id="hitlConfirmModal">
+    <div class="hitl-modal-box">
+      <div class="hitl-modal-header">
+        <h3 id="hitlConfirmTitle">Xác Nhận Của Con Người (Human Checkpoint)</h3>
+        <button class="btn-sidebar-logout" onclick="closeHitlModal('hitlConfirmModal')" style="font-size:18px;">✕</button>
+      </div>
+      <div class="hitl-modal-body" id="hitlConfirmBody">
+        <!-- Body content -->
+      </div>
+      <div class="hitl-modal-footer">
+        <button class="btn-secondary-tool" onclick="closeHitlModal('hitlConfirmModal')">Hủy bỏ</button>
+        <button class="btn-primary-action" id="hitlConfirmSubmitBtn">
+          <span>Tôi Xác Nhận & Tiếp Tục</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Request More Info Modal -->
+  <div class="hitl-modal-overlay" id="hitlRequestMoreInfoModal">
+    <div class="hitl-modal-box" style="max-width:620px;">
+      <div class="hitl-modal-header">
+        <h3>Yêu Cầu Khách Hàng Bổ Sung Thông Tin</h3>
+        <button class="btn-sidebar-logout" onclick="closeHitlModal('hitlRequestMoreInfoModal')" style="font-size:18px;">✕</button>
+      </div>
+      <div class="hitl-modal-body">
+        <div style="background:#fee2e2; color:#b91c1c; padding:10px 14px; border-radius:10px; margin-bottom:14px; font-size:12.5px; font-weight:700;" id="reqMoreMissingAlert">
+          <!-- Missing fields list -->
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email người nhận:</label>
+          <input type="email" id="reqMoreCustomerEmail" class="form-input" value="contact@customer.vn">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Bản nháp email yêu cầu làm rõ (AI sinh tự động):</label>
+          <textarea id="reqMoreEmailBody" class="form-input" style="height:150px; font-size:12.5px; line-height:1.6;"></textarea>
+        </div>
+        <div style="font-size:12px; color:#64748b;">
+          * Sau khi gửi, hồ sơ cơ hội sẽ được chuyển trạng thái sang <b>Cần bổ sung thông tin</b> và lưu vào lịch sử giao dịch.
+        </div>
+      </div>
+      <div class="hitl-modal-footer">
+        <button class="btn-secondary-tool" onclick="closeHitlModal('hitlRequestMoreInfoModal')">Đóng</button>
+        <button class="btn-primary-action" onclick="submitRequestMoreInfo()">
+          <span>Gửi Yêu Cầu Bổ Sung & Cập Nhật</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Edit Parsing Modal -->
+  <div class="hitl-modal-overlay" id="hitlEditParsingModal">
+    <div class="hitl-modal-box">
+      <div class="hitl-modal-header">
+        <h3>Hiệu Chỉnh Dữ Liệu Bóc Tách Thủ Công</h3>
+        <button class="btn-sidebar-logout" onclick="closeHitlModal('hitlEditParsingModal')" style="font-size:18px;">✕</button>
+      </div>
+      <div class="hitl-modal-body">
+        <div class="form-group">
+          <label class="form-label">Tên khách hàng / Doanh nghiệp</label>
+          <input type="text" id="editCustomerName" class="form-input">
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="form-group">
+          <div>
+            <label class="form-label">Người liên hệ</label>
+            <input type="text" id="editContactPerson" class="form-input">
+          </div>
+          <div>
+            <label class="form-label">Email liên hệ</label>
+            <input type="email" id="editCustomerEmail" class="form-input">
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="form-group">
+          <div>
+            <label class="form-label">Ngân sách dự kiến (VNĐ)</label>
+            <input type="number" id="editBudget" class="form-input" placeholder="Ví dụ: 300000000">
+          </div>
+          <div>
+            <label class="form-label">Thời hạn triển khai (ngày)</label>
+            <input type="number" id="editDeadlineDays" class="form-input" placeholder="Ví dụ: 15">
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="form-group">
+          <div>
+            <label class="form-label">Số lượng đặt mua (chiếc/bộ)</label>
+            <input type="number" id="editQuantity" class="form-input" placeholder="Ví dụ: 30">
+          </div>
+          <div>
+            <label class="form-label">Chiết khấu đề xuất (%)</label>
+            <input type="number" id="editDiscount" class="form-input" placeholder="Ví dụ: 10">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Ghi chú hiệu chỉnh của người dùng (HITL Note):</label>
+          <input type="text" id="editHitlNote" class="form-input" placeholder="Ví dụ: Đã đối soát thông tin khách hàng và số lượng chính xác">
+        </div>
+      </div>
+      <div class="hitl-modal-footer">
+        <button class="btn-secondary-tool" onclick="closeHitlModal('hitlEditParsingModal')">Hủy</button>
+        <button class="btn-primary-action" onclick="saveEditedParsingData()">
+          <span>Lưu Dữ Liệu Đã Hiệu Chỉnh</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Manager Approval Modal -->
+  <div class="hitl-modal-overlay" id="hitlApprovalModal">
+    <div class="hitl-modal-box">
+      <div class="hitl-modal-header">
+        <h3 id="apprModalTitle">Phê Duyệt Phiếu Chuyển Duyệt Chiết Khấu</h3>
+        <button class="btn-sidebar-logout" onclick="closeHitlModal('hitlApprovalModal')" style="font-size:18px;">✕</button>
+      </div>
+      <div class="hitl-modal-body">
+        <div id="apprModalOppSummary" style="background:#f8fafc; padding:14px; border-radius:12px; border:1px solid #e2e8f0; margin-bottom:14px; font-size:13px; line-height:1.6;">
+          <!-- Summary injected -->
+        </div>
+        <div class="form-group">
+          <label class="form-label">Ý kiến chỉ đạo / Ghi chú phê duyệt:</label>
+          <textarea id="apprModalNote" class="form-input" style="height:90px;" placeholder="Ví dụ: Đồng ý duyệt chiết khấu 10% do khách hàng cam kết thanh toán đợt 1 ngay sau khi ký hợp đồng..."></textarea>
+        </div>
+      </div>
+      <div class="hitl-modal-footer">
+        <button class="btn-secondary-tool" onclick="closeHitlModal('hitlApprovalModal')">Hủy bỏ</button>
+        <button class="btn-primary-action" id="apprModalSubmitBtn" onclick="confirmManagerApprovalDecision()">
+          <span>Xác Nhận Phê Duyệt</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================================
+       WELCOME AI AGENT TAB / MODAL (TAB CHÀO MỪNG ĐẾN VỚI AI AGENT)
+       ==================================================================== -->
+  <div class="hitl-modal-overlay" id="welcomeAgentModal" style="display:none; z-index: 2000;">
+    <div class="welcome-agent-modal-box">
+      <!-- Decorative Gradient Header -->
+      <div class="welcome-agent-header">
+        <div class="welcome-agent-badge">
+          <span class="status-indicator-dot" style="background:#10b981;"></span>
+          <span>AI AGENT PLATFORM v2.5</span>
+        </div>
+        <button class="btn-close-welcome" onclick="closeWelcomeAgentModal()" title="Đóng tab chào mừng">✕</button>
+      </div>
+
+      <div class="welcome-agent-body">
+        <div class="welcome-avatar-row">
+          <div class="welcome-agent-icon-box"></div>
+          <div>
+            <h2 class="welcome-agent-title">Chào Mừng Đến Với AI Agent!</h2>
+            <p class="welcome-agent-sub">Nền tảng xử lý cơ hội bán hàng B2B thông minh cho mọi doanh nghiệp</p>
+          </div>
+        </div>
+
+        <div class="welcome-user-callout" id="welcomeUserGreetingText">
+          Xin chào <b>Lê Yến Như</b>, chào mừng bạn đến với Trung tâm điều phối AI Agent! Mọi kỹ năng bóc tách yêu cầu, thẩm định kho hàng, tính báo giá và hỗ trợ phê duyệt đều đã sẵn sàng hoạt động.
+        </div>
+
+        <!-- 4 Core Capabilities Highlights -->
+        <div class="welcome-features-grid">
+          <div class="welcome-feat-card">
+            <span class="feat-badge-step">BƯỚC 01</span>
+            <div class="feat-icon"></div>
+            <div class="feat-info">
+              <h4>Tiếp Nhận & Bóc Tách</h4>
+              <p>Phân tích văn bản Email/Biểu mẫu tự động trích xuất thực thể B2B chuẩn xác.</p>
+            </div>
+          </div>
+
+          <div class="welcome-feat-card">
+            <span class="feat-badge-step">BƯỚC 02</span>
+            <div class="feat-icon"></div>
+            <div class="feat-info">
+              <h4>Thẩm Định Kho Hàng</h4>
+              <p>Đối chiếu Master Catalog, kiểm tra tồn kho và đánh giá tính khả thi tiến độ.</p>
+            </div>
+          </div>
+
+          <div class="welcome-feat-card">
+            <span class="feat-badge-step">BƯỚC 03</span>
+            <div class="feat-icon"></div>
+            <div class="feat-info">
+              <h4>Báo Giá & Chiết Khấu</h4>
+              <p>Tính toán toán học MECE, kiểm soát ma trận vượt quyền cần quản lý duyệt.</p>
+            </div>
+          </div>
+
+          <div class="welcome-feat-card">
+            <span class="feat-badge-step">BƯỚC 04</span>
+            <div class="feat-icon"></div>
+            <div class="feat-info">
+              <h4>Phê Duyệt & Xuất Báo Cáo</h4>
+              <p>Human-in-the-loop Checkpoint và tự động xuất tài liệu Word / Excel chuẩn mẫu.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Architecture Pill & Creator Credit -->
+        <div class="welcome-meta-bar">
+          <div class="meta-tag">
+            <span>Chủ nhiệm đề án:</span>
+            <b>Lê Yến Như</b>
+          </div>
+          <div class="meta-tag">
+            <span>Bảo mật:</span>
+            <b>Phân quyền RBAC & Session Token</b>
+          </div>
+          <div class="meta-tag">
+            <span>Trạng thái:</span>
+            <b style="color:#059669;">Trực tuyến 100%</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="welcome-agent-footer">
+        <div class="welcome-footer-left">
+          <label class="welcome-checkbox-label">
+            <input type="checkbox" id="chkDoNotShowAgain">
+            <span>Không tự động hiện lại trong phiên này</span>
+          </label>
+        </div>
+        <div class="welcome-footer-right">
+          <button class="btn-welcome-secondary" onclick="welcomeNavigateToStep1()">
+            <span>Tạo yêu cầu mới</span>
+          </button>
+          <button class="btn-welcome-primary" onclick="closeWelcomeAgentModal()">
+            <span>Vào Làm Việc Với Agent &rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Miffy AI Agent Chat Panel (Trợ lý AI hình Miffy hỗ trợ người dùng) -->
+  <div id="miffyChatPanel" class="miffy-chat-panel" aria-hidden="true">
+    <div class="miffy-chat-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div class="miffy-chat-avatar-circle">
+          <svg viewBox="0 0 64 64" width="34" height="34" aria-label="Miffy AI">
+            <ellipse cx="22" cy="18" rx="6.2" ry="15" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+            <ellipse cx="42" cy="18" rx="6.2" ry="15" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+            <ellipse cx="32" cy="40" rx="20" ry="16.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.6"/>
+            <ellipse cx="32" cy="39" rx="18" ry="14" fill="#FFFFFF"/>
+            <circle cx="24" cy="39" r="2.2" fill="#2B241D"/>
+            <circle cx="40" cy="39" r="2.2" fill="#2B241D"/>
+            <path d="M29.4 44.2 L34.6 47.4 M34.6 44.2 L29.4 47.4" stroke="#2B241D" stroke-width="2.1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="miffy-chat-title" id="miffyChatTitle">Miffy AI Agent</div>
+          <div class="miffy-chat-subtitle" id="miffyChatSubtitle">Sẵn sàng hỗ trợ bạn 24/7</div>
+        </div>
+      </div>
+      <button type="button" class="miffy-chat-close-btn" onclick="toggleMiffyChat(false)" title="Đóng / Close">✕</button>
+    </div>
+
+    <div class="miffy-chat-messages" id="miffyChatMessages"></div>
+
+    <div class="miffy-chat-quick-chips" id="miffyChatQuickChips"></div>
+
+    <div class="miffy-chat-input-bar">
+      <input
+        type="text"
+        id="miffyChatInput"
+        class="miffy-chat-input"
+        placeholder="Hỏi Miffy AI hoặc yêu cầu xử lý dữ liệu..."
+        onkeydown="if(event.key==='Enter'){ event.preventDefault(); handleMiffyChatSend(); }"
+      >
+      <button type="button" class="miffy-chat-send-btn" id="miffyChatSendBtn" onclick="handleMiffyChatSend()">Gửi</button>
+    </div>
+  </div>
+
+  <!-- Miffy Corner Companion (Bấm để mở Chat Miffy AI Agent) -->
+  <div id="miffyCornerMascot" class="miffy-corner-mascot" onclick="toggleMiffyChat()" title="Miffy AI Agent — Bấm để chat hỗ trợ">
+    <div class="miffy-speech-bubble" id="miffySpeechBubble">Chat với Miffy AI</div>
+    <svg viewBox="0 0 88 92" width="76" height="80" aria-label="Miffy AI Agent">
+      <!-- Ears -->
+      <ellipse cx="32" cy="20" rx="7" ry="17" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.8"/>
+      <ellipse cx="56" cy="20" rx="7" ry="17" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.8"/>
+      <!-- Head -->
+      <ellipse cx="44" cy="46" rx="24" ry="20" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.8"/>
+      <ellipse cx="44" cy="45" rx="22" ry="17.5" fill="#FFFFFF"/>
+      <!-- Eyes -->
+      <circle cx="34.5" cy="45" r="2.6" fill="#2B241D"/>
+      <circle cx="53.5" cy="45" r="2.6" fill="#2B241D"/>
+      <!-- Soft rosy cheeks -->
+      <ellipse cx="28" cy="49.5" rx="3.2" ry="2" fill="#FFCAD4" opacity="0.75"/>
+      <ellipse cx="60" cy="49.5" rx="3.2" ry="2" fill="#FFCAD4" opacity="0.75"/>
+      <!-- X Mouth -->
+      <path d="M41 50.8 L47 54.4 M47 50.8 L41 54.4" stroke="#2B241D" stroke-width="2.3" stroke-linecap="round"/>
+      <!-- Dress top peeking -->
+      <path d="M24 65 L64 65 L72 92 L16 92 Z" fill="#FFD43B" stroke="#2B241D" stroke-width="2.8" stroke-linejoin="round"/>
+      <!-- Little white paws holding edge -->
+      <ellipse cx="26" cy="69" rx="6" ry="4.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.5"/>
+      <ellipse cx="62" cy="69" rx="6" ry="4.5" fill="#FFFFFF" stroke="#2B241D" stroke-width="2.5"/>
+    </svg>
+  </div>
+
+  <script src="/app.js?v=auto_dedup_v56"></script>
+</body>
+</html>

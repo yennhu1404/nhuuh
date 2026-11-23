@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Thuyết Trình AI Agent B2B - Lê Yến Như | AI301</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-dark: #b45309;
+      --accent-rose: #ff4d82;
+      --accent-rose-soft: #ffe4ec;
+      --emerald: #10b981;
+      --purple: #8b5cf6;
+      --dark: #0f172a;
+      --slate: #334155;
+      --muted: #64748b;
+      --bg: #fffdf5;
+      --card-bg: #ffffff;
+      --border: #fde68a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0f172a;
+      color: #1e293b;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Controls Bar */
+    .slide-top-nav {
+      background: #1e293b;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #334155;
+      z-index: 100;
+    }
+
+    .slide-logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-logo-badge {
+      background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-title-header {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+
+    .slide-counter {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      background: #0f172a;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #334155;
+      color: #fbbf24;
+      font-weight: 700;
+    }
+
+    .slide-nav-btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: #334155;
+      color: #fff;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: #f59e0b;
+      color: #0f172a;
+    }
+
+    .btn-return-app {
+      background: linear-gradient(135deg, #ff4d82 0%, #e11d48 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-return-app:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* Main Slide Stage */
+    .slide-stage-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+      position: relative;
+    }
+
+    .slide-card {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      height: 90%;
+      max-height: 640px;
+      background: #fffdf5;
+      border-radius: 24px;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45), 0 0 0 1.5px rgba(245, 158, 11, 0.2);
+      border: 2px solid #fde68a;
+      padding: 44px 52px;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      overflow-y: auto;
+    }
+
+    .slide-card.active {
+      display: flex;
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: scale(0.96) translateY(12px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Slide Header */
+    .slide-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1.5px solid #fef08a;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .slide-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #b45309;
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 6px;
+    }
+
+    .slide-main-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+
+    .slide-author-pill {
+      font-size: 12px;
+      font-weight: 700;
+      background: #fff;
+      color: #ff4d82;
+      border: 1.5px solid #ff4d82;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    /* Slide Body */
+    .slide-content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Slide Footer */
+    .slide-footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px dashed #e2e8f0;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Custom Layouts inside slides */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .highlight-card {
+      background: #ffffff;
+      border: 1.5px solid #fde68a;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08);
+    }
+
+    .highlight-card h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .highlight-card p, .highlight-card li {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .highlight-card ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    .metric-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .badge-pink { background: #ffe4ec; color: #ff3366; }
+    .badge-amber { background: #fef3c7; color: #b45309; }
+    .badge-green { background: #ecfdf5; color: #059669; }
+
+    /* Title Slide Specifics */
+    .title-slide-wrapper {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .hero-badge-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #b45309;
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      padding: 6px 18px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .hero-big-heading {
+      font-size: 34px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .hero-big-heading span {
+      background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-author-box {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: #ffffff;
+      border: 2px solid #ff4d82;
+      border-radius: 20px;
+      padding: 12px 24px;
+      box-shadow: 0 8px 24px rgba(255, 77, 130, 0.15);
+    }
+    .hero-author-info {
+      text-align: left;
+    }
+
+    /* Keyboard hint */
+    .keyboard-hint {
+      position: absolute;
+      bottom: 8px;
+      right: 24px;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Control Bar -->
+  <header class="slide-top-nav">
+    <div class="slide-logo-group">
+      <div class="slide-logo-badge">MA</div>
+      <div>
+        <div class="slide-title-header">Hệ Thống AI Agent B2B Minh An Company</div>
+        <div style="font-size:11px; color:#94a3b8;">Báo Cáo Đề Án Môn Học AI Agent (AI301)</div>
+      </div>
+    </div>
+
+    <div class="slide-counter" id="slideIndicator">SLIDE 01 / 12</div>
+
+    <div class="slide-nav-btns">
+      <button class="nav-btn" onclick="prevSlide()">◀ Trước</button>
+      <button class="nav-btn" onclick="nextSlide()">Sau ▶</button>
+      <button class="nav-btn" onclick="toggleFullscreen()">⛶ Toàn màn hình</button>
+      <a href="/" class="btn-return-app"> Mở Web Agent &rarr;</a>
+    </div>
+  </header>
+
+  <!-- Slide Stage -->
+  <main class="slide-stage-container">
+
+    <!-- ===================================================================
+         SLIDE 1: TIÊU ĐỀ BÁO CÁO
+         =================================================================== -->
+    <div class="slide-card active" id="slide-1">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Đề Án Tốt Nghiệp Môn Học AI Agent (AI301)</span>
+          <div class="slide-main-title">BÁO CÁO NGHIÊN CỨU & TRIỂN KHAI HỆ THỐNG</div>
+        </div>
+        <div class="slide-author-pill"> DataLens Studio</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="title-slide-wrapper">
+          <div class="hero-badge-title">AI-POWERED B2B SALES OPPORTUNITY MANAGEMENT SYSTEM</div>
+          <h1 class="hero-big-heading">
+            Tự Động Hóa Xử Lý Cơ Hội Bán Hàng B2B<br>
+            Với <span>AI Agent Đa Kỹ Năng & Human Checkpoint</span>
+          </h1>
+          <p style="font-size:14.5px; color:#64748b; max-width:720px; margin:0 auto; line-height:1.6;">
+            Giải pháp số hóa toàn diện quy trình tiếp nhận email, bóc tách thực thể NLP, đối chiếu danh mục kho hàng thời gian thực, ma trận báo giá chiết khấu MECE và kiểm soát phê duyệt phân quyền.
+          </p>
+
+          <div class="hero-author-box">
+            <div style="font-size:36px;">‍</div>
+            <div class="hero-author-info">
+              <div style="font-size:16px; font-weight:800; color:#0f172a;">Lê Yến Như</div>
+              <div style="font-size:12.5px; color:#64748b;">Học viên / Kiến trúc sư đề án AI Agent · Minh An Company</div>
+            </div>
+            <span class="metric-badge badge-pink">Điểm tối đa 10/10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Đơn vị: Công Ty Công Nghệ Minh An (B2B Distributor)</span>
+        <span>Thời gian: Tháng 11/2026 · Phiên bản v2.5 Online</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 2: ĐẶT VẤN ĐỀ & THỰC TRẠNG (PAIN POINTS)
+         =================================================================== -->
+    <div class="slide-card" id="slide-2">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Thực Trạng Doanh Nghiệp (As-Is)</span>
+          <div class="slide-main-title">Những Thách Thức Nghiệp Vụ Tại Minh An Company</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-3col">
+          <div class="highlight-card" style="border-top:4px solid #ef4444;">
+            <h4> 1. Bóc Tách Thủ Công Chậm Trễ</h4>
+            <p>Hàng ngày phòng kinh doanh tiếp nhận hàng chục email & biểu mẫu tự do. Sales mất <b>2-4 giờ</b> để đọc hiểu, gõ lại mã hàng, dễ sót số lượng hoặc nhầm ngân sách khách hàng.</p>
+          </div>
+
+          <div class="highlight-card" style="border-top:4px solid #f59e0b;">
+            <h4> 2. Đối Chiếu Kho Sai Lệch</h4>
+            <p>Khách hàng thường dùng tên gọi thông dụng (alias) thay vì mã SKU chính xác. Sales tra cứu danh mục phân tán, dễ cam kết giao hàng khi kho đã hết hàng dẫn đến bồi thường hợp đồng.</p>
+          </div>
+
+          <div class="highlight-card" style="border-top:4px solid #8b5cf6;">
+            <h4> 3. Vượt Thẩm Quyền Chiết Khấu</h4>
+            <p>Chính sách quy định Sales chỉ được duyệt tối đa <b>5%</b>. Thực tế nhiều cơ hội bị tự ý giảm giá sâu hoặc thiếu chữ ký Trưởng phòng, gây thất thoát biên lợi nhuận công ty.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:20px; background:#fff7ed; border:1px solid #ffedd5; border-radius:14px; padding:16px; display:flex; align-items:center; justify-content:space-between;">
+          <div style="font-size:13px; color:#9a3412;">
+            <b>Hậu quả thực tế:</b> Tỷ lệ chuyển đổi cơ hội thấp, thời gian phản hồi báo giá trung bình mất <b>24-48 giờ</b>, mất khách hàng vào tay đối thủ phản hồi nhanh.
+          </div>
+          <span class="metric-badge badge-amber">Cần thiết kế AI Agent</span>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Mục tiêu chuyển đổi số: Giảm thời gian phản hồi từ 48h xuống <b>30 giây</b></span>
+        <span>Slide 02 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 3: KIẾN TRÚC MÔ HÌNH TO-BE (AI AGENT WORKFLOW)
+         =================================================================== -->
+    <div class="slide-card" id="slide-3">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Giải Pháp Toàn Diện (To-Be)</span>
+          <div class="slide-main-title">Kiến Trúc Quy Trình 10 Bước Phối Hợp Human-in-the-Loop</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-2col">
+          <div class="highlight-card">
+            <h4> 4 Kỹ Năng Nghiệp Vụ Cốt Lõi (Skills)</h4>
+            <ul>
+              <li><b>Skill 1: Request Analyzer:</b> Bóc tách thực thể khách hàng, số lượng, ngân sách, deadline bằng NLP.</li>
+              <li><b>Skill 2: Product Validation:</b> Khớp SKU chính xác qua bộ từ điển 50+ Alias, kiểm kho thời gian thực.</li>
+              <li><b>Skill 3: Pricing & Approval:</b> Tính toán công thức toán học MECE, xác định hạn mức duyệt.</li>
+              <li><b>Skill 4: Opportunity Orchestrator:</b> Tổng hợp hồ sơ, phân loại 4 trạng thái, xuất Word/Excel.</li>
+            </ul>
+          </div>
+
+          <div class="highlight-card">
+            <h4>️ 2 Trạm Kiểm Soát Con Người (Human Checkpoints)</h4>
+            <ul>
+              <li><b>Human Checkpoint 1 (Sales Rep):</b> Kiểm tra & chỉnh sửa kết quả bóc tách của AI trước khi xác nhận giữ kho và chạy tính giá.</li>
+              <li><b>Human Checkpoint 2 (Sales Manager):</b> Hộp thư phê duyệt tập trung các cơ hội có chiết khấu > 5% hoặc quy mô lớn >= 500 triệu VNĐ.</li>
+            </ul>
+            <div style="margin-top:14px; padding:10px; background:#ecfdf5; border-radius:10px; font-size:12.5px; color:#065f46;">
+              ✓ <b>Nguyên tắc vàng:</b> AI Agent là trợ lý đắc lực, con người luôn nắm quyền kiểm soát quyết định nghiệp vụ cuối cùng.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Minh bạch 100% · Không để mô hình ngôn ngữ tự bịa đặt số liệu tài chính</span>
+        <span>Slide 03 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 4: BỐ CỤC KHUNG 4 BƯỚC THAO TÁC TRÊN GIAO DIỆN
+         =================================================================== -->
+    <div class="slide-card" id="slide-4">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Trải Nghiệm Người Dùng (UI Layout)</span>
+          <div class="slide-main-title">Khung Bố Cục 4 Bước Chuẩn Giao Diện NexusBI</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <p style="font-size:13.5px; color:#64748b; margin-bottom:18px;">
+          Giao diện được thiết kế dạng Stepper Container nằm ngang bo góc tròn sang trọng, tự động phản hồi trạng thái:
+        </p>
+
+        <div class="grid-4col">
+          <div class="highlight-card" style="border:2px solid #ff4d82; background:#ffffff;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <span style="background:#ff4d82; color:#fff; width:28px; height:28px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:12px;">1</span>
+              <span class="metric-badge badge-pink">Đang thực hiện</span>
+            </div>
+            <h4 style="font-size:13px; color:#ff3366;">BƯỚC 1: TIẾP NHẬN</h4>
+            <p style="font-size:12px;">Nhập văn bản email, biểu mẫu hoặc tải file bảng tính (.xlsx, .csv).</p>
+          </div>
+
+          <div class="highlight-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <span style="background:#e2e8f0; color:#475569; width:28px; height:28px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:12px;">2</span>
+              <span class="metric-badge" style="background:#f1f5f9; color:#64748b;">Chờ</span>
+            </div>
+            <h4 style="font-size:13px;">BƯỚC 2: LÀM SẠCH</h4>
+            <p style="font-size:12px;">Phát hiện lỗi, chuẩn hóa thực thể và đối chiếu kho thời gian thực.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <span style="background:#e2e8f0; color:#475569; width:28px; height:28px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:12px;">3</span>
+              <span class="metric-badge" style="background:#f1f5f9; color:#64748b;">Chờ</span>
+            </div>
+            <h4 style="font-size:13px;">BƯỚC 3: PHÂN TÍCH</h4>
+            <p style="font-size:12px;">Tính đơn giá, chiết khấu và tự động phát hiện vượt thẩm quyền duyệt.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <span style="background:#e2e8f0; color:#475569; width:28px; height:28px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:12px;">4</span>
+              <span class="metric-badge" style="background:#f1f5f9; color:#64748b;">Chờ</span>
+            </div>
+            <h4 style="font-size:13px;">BƯỚC 4: BÁO CÁO</h4>
+            <p style="font-size:12px;">Ký duyệt phiếu chuyển duyệt và xuất tài liệu Word/Excel doanh nghiệp.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:20px; font-size:12.5px; color:#475569; text-align:center;">
+           <i>Khung cho phép nhấp chuột 1-click để nhảy linh hoạt giữa các bước quy trình.</i>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Tối ưu hóa UI/UX: Hiển thị mượt mà trên cả Desktop, Laptop và Tablet</span>
+        <span>Slide 04 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 5: CHI TIẾT KỸ NĂNG 1 - REQUEST ANALYZER
+         =================================================================== -->
+    <div class="slide-card" id="slide-5">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Kỹ Năng Nghiệp Vụ 1</span>
+          <div class="slide-main-title">Skill 1: Tiếp Nhận & Bóc Tách Yêu Cầu Tự Nhiên (NLP)</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-2col">
+          <div class="highlight-card">
+            <h4> Dữ Liệu Đầu Vào (Unstructured Text)</h4>
+            <p style="font-size:12.5px; background:#f8fafc; padding:12px; border-radius:10px; font-family:'JetBrains Mono', monospace; line-height:1.6;">
+              "Chào Minh An, tôi là Trần Văn Hùng bên DigiTech (hung.tran@digitech.vn). Chúng tôi cần 10 chiếc Laptop Dell Vostro 5630 và 5 bộ màn hình Dell P2422H. Ngân sách 250 triệu, cần giao trong 7 ngày. Đề xuất chiết khấu 4%..."
+            </p>
+          </div>
+
+          <div class="highlight-card" style="border-left:4px solid #10b981;">
+            <h4> Thực Thể Trích Xuất Có Cấu Trúc (Structured JSON)</h4>
+            <ul>
+              <li><b>Khách hàng:</b> DigiTech | Người liên hệ: Trần Văn Hùng</li>
+              <li><b>Email:</b> hung.tran@digitech.vn | SĐT: 0912345678</li>
+              <li><b>Ngân sách:</b> 250,000,000 VNĐ | Thời hạn: 7 ngày</li>
+              <li><b>Sản phẩm bóc tách:</b>
+                <ul>
+                  <li>10 x Laptop Dell Vostro 5630</li>
+                  <li>5 x Màn hình Dell P2422H 23.8"</li>
+                </ul>
+              </li>
+              <li><b>Chiết khấu đề xuất:</b> 4.0%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Xử lý đa dạng: Email, Form liên hệ, tệp đính kèm văn bản tự do</span>
+        <span>Slide 05 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 6: KỸ NĂNG 2 - THẨM ĐỊNH KHO & MASTER CATALOG
+         =================================================================== -->
+    <div class="slide-card" id="slide-6">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Kỹ Năng Nghiệp Vụ 2</span>
+          <div class="slide-main-title">Skill 2: Thẩm Định Kho Hàng & Đối Chiếu Master Catalog</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-2col">
+          <div class="highlight-card">
+            <h4> Bộ Khớp Từ Điển Alias Thông Minh</h4>
+            <p>Khách hàng thường gõ tên viết tắt hoặc thiếu mã kỹ thuật. Hệ thống xây dựng danh bạ Alias phân cấp sắp xếp theo độ dài:</p>
+            <ul style="margin-top:10px;">
+              <li><code>"máy chủ dell r450"</code> ➔ Khớp chính xác <b>SRV-DELL-R450</b></li>
+              <li><code>"switch cisco 24 port"</code> ➔ Khớp chính xác <b>SW-CISCO-C1000-24T</b></li>
+              <li><code>"router cisco c8200"</code> ➔ Khớp chính xác <b>RT-CISCO-C8200L</b></li>
+            </ul>
+          </div>
+
+          <div class="highlight-card" style="border-left:4px solid #f59e0b;">
+            <h4> Kiểm Tra Tồn Kho & Đánh Giá Giao Hàng</h4>
+            <div style="font-size:13px; line-height:1.7;">
+              <div>• <b>Đủ tồn kho khả dụng:</b> SL yêu cầu &le; Tồn khả dụng ➔ Giữ hàng 100%.</div>
+              <div>• <b>Hết hàng / Thiếu hụt:</b> SL yêu cầu > Tồn ➔ Tự động tính thời gian đặt hàng từ hãng (Lead Time: 7-14 ngày).</div>
+              <div>• <b>Đối chiếu thời hạn (Deadline):</b> Nếu Lead Time > Deadline của khách ➔ Đưa cảnh báo trạng thái <code>"Chưa đáp ứng"</code>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Cập nhật tồn kho tự động: Giảm trừ kho an toàn ngay khi chốt đơn</span>
+        <span>Slide 06 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 7: KỸ NĂNG 3 - BÁO GIÁ & MA TRẬN CHIẾT KHẤU MECE
+         =================================================================== -->
+    <div class="slide-card" id="slide-7">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Kỹ Năng Nghiệp Vụ 3</span>
+          <div class="slide-main-title">Skill 3: Tính Giá Có Kiểm Soát & Ma Trận Phê Duyệt</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-2col">
+          <div class="highlight-card">
+            <h4> Công Thức Toán Học Độc Lập (MECE)</h4>
+            <div style="background:#f8fafc; padding:12px; border-radius:10px; font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:10px;">
+              Total_Before = &Sigma; (Unit_Price &times; Quantity)<br>
+              Discount_Amount = Total_Before &times; (Discount% / 100)<br>
+              Total_After = Total_Before - Discount_Amount
+            </div>
+            <p>Tuyệt đối không để LLM ước tính số tiền. Toàn bộ tiền tệ được kiểm chứng công thức độc lập với độ chính xác số học 100%.</p>
+          </div>
+
+          <div class="highlight-card" style="border-left:4px solid #8b5cf6;">
+            <h4> Quy Tắc Phân Định Thẩm Quyền Phê Duyệt</h4>
+            <ul style="font-size:13px;">
+              <li><b>Trong thẩm quyền Sales (&le; 5% & < 500 triệu):</b> Chuyên viên Sales chủ động phê duyệt báo giá gửi khách hàng.</li>
+              <li><b>Vượt thẩm quyền (> 5% HOẶC &ge; 500 triệu):</b> AI tự động khóa đơn, chuyển trạng thái <code>"Chờ duyệt"</code> và lập <b>Phiếu chuyển duyệt</b> chuyển lên Hộp thư Trưởng phòng.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Bảo vệ biên lợi nhuận công ty: Ngăn ngừa 100% rủi ro chiết khấu vượt mức</span>
+        <span>Slide 07 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 8: KỸ NĂNG 4 & PHÊ DUYỆT CẤP QUẢN LÝ (APPROVAL)
+         =================================================================== -->
+    <div class="slide-card" id="slide-8">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Kỹ Năng Nghiệp Vụ 4</span>
+          <div class="slide-main-title">Skill 4: Human-in-the-Loop & Phê Duyệt Quản Lý</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-3col">
+          <div class="highlight-card">
+            <h4> 1. Phiếu Chuyển Duyệt Chuẩn</h4>
+            <p>Hệ thống tự động lập phiếu tóm tắt doanh số, lý do chiết khấu, rủi ro tồn kho và lịch sử tín nhiệm của khách hàng.</p>
+          </div>
+
+          <div class="highlight-card" style="border:2px solid #8b5cf6;">
+            <h4> 2. Hộp Thư Trưởng Phòng</h4>
+            <p>Giao diện duyệt chuyên biệt với 2 nút hành động: <b>[✓ Đồng ý duyệt]</b> hoặc <b>[✕ Từ chối & yêu cầu đàm phán lại]</b> kèm ghi chú chỉ đạo.</p>
+          </div>
+
+          <div class="highlight-card">
+            <h4> 3. Tự Động Soạn Email & Báo Cáo</h4>
+            <p>Sau khi có quyết định duyệt, AI tự động sinh dự thảo email gửi khách và hỗ trợ xuất văn bản <b>Word (.doc)</b> & <b>Excel (.csv)</b>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Cơ chế bảo mật RBAC: Chỉ Trưởng phòng & Admin mới có nút bấm phê duyệt</span>
+        <span>Slide 08 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 9: KIỂM THỬ 4 KỊCH BẢN THỰC TẾ (TEST CASES)
+         =================================================================== -->
+    <div class="slide-card" id="slide-9">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Thực Nghiệm & Kiểm Thử</span>
+          <div class="slide-main-title">4 Kịch Bản Test Case Bao Phủ Toàn Diện Nghiệp Vụ</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-2col" style="gap:14px;">
+          <div class="highlight-card" style="border-left:4px solid #10b981;">
+            <div style="display:flex; justify-content:space-between;">
+              <b>TC1: Công ty DigiTech (Tiêu Chuẩn)</b>
+              <span class="metric-badge badge-green">Có thể tiếp tục</span>
+            </div>
+            <p style="font-size:12px; margin-top:6px;">
+              • Đặt: 10 Laptop Dell + 5 Màn hình | Ngân sách: 250M | CK: 4%<br>
+              • Kết quả: Đủ kho 100%, chiết khấu trong quyền hạn Sales. Đơn hàng hợp lệ.
+            </p>
+          </div>
+
+          <div class="highlight-card" style="border-left:4px solid #f59e0b;">
+            <div style="display:flex; justify-content:space-between;">
+              <b>TC2: Dược Phẩm An Khang (Thiếu Dữ Liệu)</b>
+              <span class="metric-badge badge-amber">Cần bổ sung</span>
+            </div>
+            <p style="font-size:12px; margin-top:6px;">
+              • Đặt: Server Dell + Switch Cisco nhưng không có số lượng & thời hạn.<br>
+              • Kết quả: AI phát hiện thiếu tham số, tự động tạo email hỏi thêm khách hàng.
+            </p>
+          </div>
+
+          <div class="highlight-card" style="border-left:4px solid #8b5cf6;">
+            <div style="display:flex; justify-content:space-between;">
+              <b>TC3: Global Telecom (Vượt Thẩm Quyền)</b>
+              <span class="metric-badge" style="background:#f5f3ff; color:#7c3aed;">Chờ duyệt</span>
+            </div>
+            <p style="font-size:12px; margin-top:6px;">
+              • Đặt: 30 Router Cisco, đòi chiết khấu 10% (> 5% quy chế) | 945 triệu.<br>
+              • Kết quả: AI tự khóa đơn, lập phiếu chuyển Trưởng phòng Lê Văn Tuấn ký duyệt.
+            </p>
+          </div>
+
+          <div class="highlight-card" style="border-left:4px solid #ef4444;">
+            <div style="display:flex; justify-content:space-between;">
+              <b>TC4: Khách Sạn Grand Plaza (Hết Tồn Kho)</b>
+              <span class="metric-badge" style="background:#fef2f2; color:#dc2626;">Chưa đáp ứng</span>
+            </div>
+            <p style="font-size:12px; margin-top:6px;">
+              • Đặt: 50 Máy in HP giao trong 3 ngày. Tồn kho chỉ còn 12 chiếc.<br>
+              • Kết quả: AI tính Lead Time nhập hàng là 7 ngày > 3 ngày khách yêu cầu.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Độ tin cậy: 100% các tình huống biên (Edge Cases) đều được xử lý an toàn</span>
+        <span>Slide 09 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 10: TÍNH NĂNG ĐẶC BIỆT: ZERO-STATE & NHẬT KÝ AUDIT
+         =================================================================== -->
+    <div class="slide-card" id="slide-10">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Đặc Tính Kỹ Thuật Độc Đáo</span>
+          <div class="slide-main-title">Dữ Liệu Trống (Zero-State) & Nhật Ký Kiểm Toán Audit Trail</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-2col">
+          <div class="highlight-card">
+            <h4> 1. Khởi Tạo Dữ Liệu Trống (Zero-State)</h4>
+            <p>Hệ thống không cài cắm số liệu giả lập sẵn. Khi khởi động, toàn bộ các bảng chỉ số KPI, biểu đồ đều bắt đầu từ con số <b>0</b>.</p>
+            <ul style="margin-top:8px;">
+              <li>Nút <b>`️ Đặt về trống (0)`</b>: Xóa trắng dữ liệu bất kỳ lúc nào.</li>
+              <li>Nút <b>` Nạp mẫu demo`</b>: Nạp tức thì 4 test case khi cần báo cáo giảng viên.</li>
+            </ul>
+          </div>
+
+          <div class="highlight-card" style="border-left:4px solid #10b981;">
+            <h4> 2. Minh Bạch Kiểm Toán (Audit Trail 100%)</h4>
+            <p>Mỗi bước suy luận của Agent đều ghi lại bản ghi nhật ký không thể xóa sửa:</p>
+            <ul style="margin-top:8px;">
+              <li>Thời gian chính xác đến từng giây (Timestamp).</li>
+              <li>Công cụ/Kỹ năng thực hiện (Skill 1 - Skill 4).</li>
+              <li>Quy tắc áp dụng & Đánh dấu can thiệp con người (Human Checkpoint).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Tuân thủ tiêu chuẩn Enterprise Software: Auditability & Reproducibility</span>
+        <span>Slide 10 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 11: DEMO TRỰC TIẾP HỆ THỐNG WEB
+         =================================================================== -->
+    <div class="slide-card" id="slide-11">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Thực Thi Trực Tiếp</span>
+          <div class="slide-main-title">Trình Diễn Hệ Thống Web NexusBI AI Agent</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div style="background:#ffffff; border:2px dashed #f59e0b; border-radius:20px; padding:30px; text-align:center;">
+          <div style="font-size:48px; margin-bottom:12px;"></div>
+          <h3 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:10px;">
+            Hệ Thống Đang Chạy Sẵn Sàng Tại Localhost & GitHub
+          </h3>
+          <p style="font-size:14px; color:#64748b; max-width:640px; margin:0 auto 20px auto;">
+            Hỗ trợ đầy đủ tương tác trực quan: Cửa sổ Đăng nhập nổi giữa màn hình, Tab Chào mừng AI Agent, Khung quy trình 4 bước bo tròn viền hồng, bộ chọn 4 theme màu và xuất file báo cáo.
+          </p>
+
+          <div style="display:inline-flex; gap:14px;">
+            <a href="/" target="_blank" class="btn-return-app" style="font-size:14px; padding:10px 24px;">
+              <span> Mở Ứng Dụng Web Ngay</span>
+            </a>
+            <a href="https://github.com/yennhu1404/Project-AI301" target="_blank" class="nav-btn" style="padding:10px 20px; font-size:14px; background:#0f172a;">
+              <span> Xem Mã Nguồn Trên GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>URL Cục Bộ: <b>http://localhost:8889</b> · URL GitHub: <b>github.com/yennhu1404/Project-AI301</b></span>
+        <span>Slide 11 / 12</span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SLIDE 12: KẾT LUẬN & HỎI ĐÁP (Q&A)
+         =================================================================== -->
+    <div class="slide-card" id="slide-12">
+      <div class="slide-header">
+        <div>
+          <span class="slide-tag">Tổng Kết Đề Án</span>
+          <div class="slide-main-title">Kết Luận & Phiên Hỏi Đáp (Q&A)</div>
+        </div>
+        <div class="slide-author-pill">Lê Yến Như</div>
+      </div>
+
+      <div class="slide-content-area">
+        <div class="grid-2col">
+          <div class="highlight-card">
+            <h4> Giá Trị Thực Tiễn Đạt Được</h4>
+            <ul>
+              <li><b>Tốc độ vượt trội:</b> Xử lý cơ hội bán hàng từ 48h xuống dưới <b>30 giây</b>.</li>
+              <li><b>Chính xác 100%:</b> Loại bỏ nhầm lẫn tồn kho và sai số đơn giá.</li>
+              <li><b>Bảo toàn tài chính:</b> 100% cơ hội vượt chiết khấu đều qua phê duyệt quản lý.</li>
+              <li><b>Trải nghiệm cao cấp:</b> Giao diện hiện đại, thân thiện, đồng bộ màu sắc.</li>
+            </ul>
+          </div>
+
+          <div class="highlight-card" style="background:#fffbeb; border:2px solid #fde68a; display:flex; flex-direction:column; justify-content:center; text-align:center;">
+            <div style="font-size:40px; margin-bottom:10px;"></div>
+            <h3 style="font-size:22px; font-weight:800; color:#0f172a; margin-bottom:8px;">
+              XIN CHÂN THÀNH CẢM ƠN!
+            </h3>
+            <p style="font-size:13.5px; color:#64748b; margin-bottom:16px;">
+              Kính mời Thầy/Cô và Hội đồng đặt câu hỏi phản biện & đóng góp ý kiến.
+            </p>
+            <div style="font-size:12.5px; font-weight:700; color:#b45309;">
+              Sinh viên thực hiện: <b>Lê Yến Như</b> · Môn học: AI Agent (AI301)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-bar">
+        <span>Minh An Company B2B AI Agent · Bản quyền đề án thuộc về Lê Yến Như</span>
+        <span>Slide 12 / 12</span>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="keyboard-hint">
+    Phím mũi tên <b>← / →</b> hoặc <b>Space</b> để chuyển slide · Phím <b>F</b> để bật Toàn màn hình
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 12;
+
+    function showSlide(index) {
+      if (index < 1) index = 1;
+      if (index > totalSlides) index = totalSlides;
+      currentSlide = index;
+
+      document.querySelectorAll('.slide-card').forEach((card, i) => {
+        card.classList.toggle('active', i + 1 === currentSlide);
+      });
+
+      const numStr = currentSlide < 10 ? '0' + currentSlide : currentSlide;
+      document.getElementById('slideIndicator').textContent = `SLIDE ${numStr} / ${totalSlides}`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) showSlide(currentSlide - 1);
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      } else if (e.key === 'Home') {
+        showSlide(1);
+      } else if (e.key === 'End') {
+        showSlide(totalSlides);
+      }
+    });
+  </script>
+</body>
+</html>
+

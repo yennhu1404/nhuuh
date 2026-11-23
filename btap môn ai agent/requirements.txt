@@ -1,0 +1,17 @@
+# Enterprise Data Analytics AI Agent
+# Cài đặt môi trường nếu triển khai production:
+
+# LLM Frameworks & Orchestration (tuỳ chọn khi tích hợp API thật)
+# langchain>=0.2.0
+# langgraph>=0.1.0
+
+# Data Processing & Analysis (tùy chọn khi chạy phân tích offline; web/Vercel dùng Python stdlib để giữ gói nhẹ < 250MB)
+# pandas>=2.0.0
+# polars>=0.20.0
+# plotly>=5.18.0
+
+# Database connectors
+# psycopg2-binary>=2.9.0  # PostgreSQL
+# google-cloud-bigquery>=3.14.0 # Google BigQuery
+# snowflake-connector-python>=3.6.0 # Snowflake
+
